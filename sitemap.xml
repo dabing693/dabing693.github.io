@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2020-07-24T16:40:01.498Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/02/Hexo_posts/</loc>
+    
+    <lastmod>2020-07-24T16:18:57.803Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/05/31/Git_commands/</loc>
+    
+    <lastmod>2020-07-24T16:15:32.147Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/30/Hadoop_install/</loc>
+    
+    <lastmod>2020-07-24T16:13:41.632Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/link/index.html</loc>
     
     <lastmod>2020-07-24T15:44:20.585Z</lastmod>
@@ -19,27 +47,6 @@
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2020-07-24T15:39:34.504Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/30/Hadoop_install/</loc>
-    
-    <lastmod>2020-07-24T13:58:46.455Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/02/Hexo_posts/</loc>
-    
-    <lastmod>2020-07-24T13:47:42.470Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/05/31/Git_commands/</loc>
-    
-    <lastmod>2020-07-24T13:46:55.094Z</lastmod>
     
   </url>
   

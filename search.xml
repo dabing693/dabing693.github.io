@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hadoop伪分布式安装</title>
-    <url>/2020/06/30/Hadoop_install/</url>
-    <content><![CDATA[<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h2>]]></content>
-      <tags>
-        <tag>hadoop</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git常用命令</title>
     <url>/2020/05/31/Git_commands/</url>
-    <content><![CDATA[<h2 id="新建本地仓库"><a href="#新建本地仓库" class="headerlink" title="新建本地仓库"></a>新建本地仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。<br>对于Git仓库来说，每个人都有一个独立完整的仓库，所谓的远程仓库或是服务器仓库其实也是一个仓库，只不过这台主机24小时运行，它是一个稳定的仓库，供他人克隆、推送，也从服务器仓库中拉取别人的提交。</p>
+<h2 id="新建本地仓库"><a href="#新建本地仓库" class="headerlink" title="新建本地仓库"></a>新建本地仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
 <p>此命令初始化一个新本地仓库，它在工作目录下生成一个名为.git的隐藏文件夹。</p>
 <h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add [filename]</span><br></pre></td></tr></table></figure>
 <h2 id="生成一个提交"><a href="#生成一个提交" class="headerlink" title="生成一个提交"></a>生成一个提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"xxx"</span></span><br></pre></td></tr></table></figure>
@@ -27,9 +20,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Hadoop伪分布式安装</title>
+    <url>/2020/06/30/Hadoop_install/</url>
+    <content><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p>
+<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hadoop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo发帖</title>
     <url>/2020/06/02/Hexo_posts/</url>
-    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。</p>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p>
 <h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p>
@@ -43,6 +48,9 @@
 
 <p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>
 ]]></content>
+      <categories>
+        <category>命令大全</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
