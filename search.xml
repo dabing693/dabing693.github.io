@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git常用命令</title>
-    <url>/2020/05/31/Git_commands/</url>
-    <content><![CDATA[<h2 id="新建本地仓库"><a href="#新建本地仓库" class="headerlink" title="新建本地仓库"></a>新建本地仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-<p>此命令初始化一个新本地仓库，它在工作目录下生成一个名为.git的隐藏文件夹。</p>
-<h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add [filename]</span><br></pre></td></tr></table></figure>
-<h2 id="生成一个提交"><a href="#生成一个提交" class="headerlink" title="生成一个提交"></a>生成一个提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"xxx"</span></span><br></pre></td></tr></table></figure>
-<p>在git add 的基础上调用commit生成一个提交。</p>
-<h2 id="本地仓库提交"><a href="#本地仓库提交" class="headerlink" title="本地仓库提交"></a>本地仓库提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push -u [origin] master</span><br></pre></td></tr></table></figure>
-<p>把本地仓库push到github上面，此步骤需要你输入帐号和密码</p>
-]]></content>
-      <categories>
-        <category>命令大全</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hadoop伪分布式安装</title>
     <url>/2020/06/30/Hadoop_install/</url>
     <content><![CDATA[<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h2>]]></content>
@@ -45,6 +27,24 @@
 ]]></content>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git常用命令</title>
+    <url>/2020/05/31/Git_commands/</url>
+    <content><![CDATA[<h2 id="新建本地仓库"><a href="#新建本地仓库" class="headerlink" title="新建本地仓库"></a>新建本地仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>此命令初始化一个新本地仓库，它在工作目录下生成一个名为.git的隐藏文件夹。</p>
+<h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add [filename]</span><br></pre></td></tr></table></figure>
+<h2 id="生成一个提交"><a href="#生成一个提交" class="headerlink" title="生成一个提交"></a>生成一个提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"xxx"</span></span><br></pre></td></tr></table></figure>
+<p>在git add 的基础上调用commit生成一个提交。</p>
+<h2 id="本地仓库提交"><a href="#本地仓库提交" class="headerlink" title="本地仓库提交"></a>本地仓库提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push -u [origin] master</span><br></pre></td></tr></table></figure>
+<p>把本地仓库push到github上面，此步骤需要你输入帐号和密码</p>
+]]></content>
+      <categories>
+        <category>命令大全</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
 </search>
