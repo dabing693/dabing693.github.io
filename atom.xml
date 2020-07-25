@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小辉博客</title>
-  <icon>http://yoursite.com/icon.png</icon>
+  
   
   <link href="/atom.xml" rel="self"/>
   
@@ -23,14 +23,13 @@
     <published>2020-06-30T04:21:01.000Z</published>
     <updated>2020-07-24T16:13:41.632Z</updated>
     
+    <content type="html"><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p><h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
+    
     <summary type="html">
     
       
       
-        
-        
-          &lt;p&gt;Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoo
-        
+        &lt;p&gt;Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoo
       
     
     </summary>
@@ -50,14 +49,13 @@
     <published>2020-06-02T12:52:36.191Z</published>
     <updated>2020-07-24T16:18:57.803Z</updated>
     
+    <content type="html"><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p><h3 id="让服务器运行"><a href="#让服务器运行" class="headerlink" title="让服务器运行"></a>让服务器运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server 或者 hexo s</span><br></pre></td></tr></table></figure><p>之后你可以通过浏览器地址输入localhost:4000在本地查看博客信息。</p><p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Hexo服务器</a></p><h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate 或者 hexo g</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Hexo静态页面</a></p><h3 id="部署到远端网页"><a href="#部署到远端网页" class="headerlink" title="部署到远端网页"></a>部署到远端网页</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy 或者 hexo d</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>]]></content>
+    
     <summary type="html">
     
       
       
-        
-        
-          &lt;p&gt;欢迎来到 &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt; ，这是你的第一个帖子。你可以从 &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot;
-        
+        &lt;p&gt;欢迎来到 &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt; ，这是你的第一个帖子。你可以从 &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; r
       
     
     </summary>
@@ -77,14 +75,13 @@
     <published>2020-05-31T07:54:41.000Z</published>
     <updated>2020-07-25T03:48:47.269Z</updated>
     
+    <content type="html"><![CDATA[<p>Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。<br>对于Git仓库来说，每个人都有一个独立完整的仓库，所谓的远程仓库或是服务器仓库其实也是一个仓库，只不过这台主机24小时运行，它是一个稳定的仓库，供他人克隆、推送，也从服务器仓库中拉取别人的提交。</p><h2 id="新建本地仓库"><a href="#新建本地仓库" class="headerlink" title="新建本地仓库"></a>新建本地仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure><p>此命令初始化一个新本地仓库，它在工作目录下生成一个名为.git的隐藏文件夹。</p><h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add [filename]</span><br></pre></td></tr></table></figure><h2 id="生成一个提交"><a href="#生成一个提交" class="headerlink" title="生成一个提交"></a>生成一个提交</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"xxx"</span></span><br></pre></td></tr></table></figure><p>在git add 的基础上调用commit生成一个提交。</p><h2 id="本地仓库提交"><a href="#本地仓库提交" class="headerlink" title="本地仓库提交"></a>本地仓库提交</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u [origin] master</span><br></pre></td></tr></table></figure><p>把本地仓库push到github上面，此步骤需要你输入帐号和密码</p>]]></content>
+    
     <summary type="html">
     
       
       
-        
-        
-          &lt;p&gt;Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。&lt;br&gt;对于Git仓库来说，每个
-        
+        &lt;p&gt;Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。&lt;br&gt;对于Git仓库来说，每个
       
     
     </summary>
