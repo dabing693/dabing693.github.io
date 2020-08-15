@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-24T16:13:41.632Z</updated>
+  <updated>2020-08-15T05:36:40.804Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CDS与ORF的区别</title>
+    <link href="http://yoursite.com/2020/08/15/Bioinformatics001/"/>
+    <id>http://yoursite.com/2020/08/15/Bioinformatics001/</id>
+    <published>2020-08-15T05:33:01.000Z</published>
+    <updated>2020-08-15T05:36:40.804Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ORF"><a href="#ORF" class="headerlink" title="ORF"></a>ORF</h2><p>ORF（开放读码框）是从一个起始密码子开始到一个终止密码子结束的一段序列；不是所有读码框都能被表达出蛋白产物。</p><h2 id="CDS"><a href="#CDS" class="headerlink" title="CDS"></a>CDS</h2><p>CDS，是编码一段蛋白产物的序列。<br>CDS必定是一个ORF。但也可能包括很多ORF。反之，每个ORF不一定都是CDS。 </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;ORF&quot;&gt;&lt;a href=&quot;#ORF&quot; class=&quot;headerlink&quot; title=&quot;ORF&quot;&gt;&lt;/a&gt;ORF&lt;/h2&gt;&lt;p&gt;ORF（开放读码框）是从一个起始密码子开始到一个终止密码子结束的一段序列；不是所有读码框都能被表达出蛋白产物。&lt;/p&gt;
+&lt;h2 id
+      
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="生信" scheme="http://yoursite.com/tags/%E7%94%9F%E4%BF%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Hadoop伪分布式安装</title>
