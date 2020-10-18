@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-15T05:36:40.804Z</updated>
+  <updated>2020-10-18T12:34:06.402Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javaweb--http协议</title>
+    <link href="http://yoursite.com/2020/10/18/javaweb01/"/>
+    <id>http://yoursite.com/2020/10/18/javaweb01/</id>
+    <published>2020-10-18T12:30:01.000Z</published>
+    <updated>2020-10-18T12:34:06.402Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP），是用于从服务器到浏览器的传输协议</p><ul><li>post发送请求数据时的中文乱码<br>$ req.setCharacterEncoding(“UTF-8”);</li><li>解决服务器响应数据乱码<br>$ resp.setContentType(“text/html;charset=UTF-8”);<br>Http是一个基于tcp/ip通信协议来传输数据（html文件、图片、查询结果等）的协议，是应用层的协议，http协议是对tcp协议的包装，其底层是tcp</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP），是用于从服务器到浏览器的传输协议&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="javaweb" scheme="http://yoursite.com/tags/javaweb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo发帖</title>
+    <link href="http://yoursite.com/2020/10/07/Hexo_posts/"/>
+    <id>http://yoursite.com/2020/10/07/Hexo_posts/</id>
+    <published>2020-10-07T04:50:41.242Z</published>
+    <updated>2020-07-24T16:18:57.803Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p><h3 id="让服务器运行"><a href="#让服务器运行" class="headerlink" title="让服务器运行"></a>让服务器运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server 或者 hexo s</span><br></pre></td></tr></table></figure><p>之后你可以通过浏览器地址输入localhost:4000在本地查看博客信息。</p><p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Hexo服务器</a></p><h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate 或者 hexo g</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Hexo静态页面</a></p><h3 id="部署到远端网页"><a href="#部署到远端网页" class="headerlink" title="部署到远端网页"></a>部署到远端网页</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy 或者 hexo d</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;欢迎来到 &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt; ，这是你的第一个帖子。你可以从 &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; r
+      
+    
+    </summary>
+    
+    
+      <category term="命令大全" scheme="http://yoursite.com/categories/%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python dataframe常用函数</title>
+    <link href="http://yoursite.com/2020/08/19/python_dataframe/"/>
+    <id>http://yoursite.com/2020/08/19/python_dataframe/</id>
+    <published>2020-08-19T07:37:01.000Z</published>
+    <updated>2020-08-19T08:19:08.900Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><p>import pandas as pd<br>import numpy as np</p><h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><p>df = pd.read_csv(r”Dmawsoni_genemodel_v1.gff”, header=None, sep=’\t’)</p><h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><p>df=df.sort_index(axis = 0,ascending = True,by = [0,3])</p><h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><p>df=df.reset_index(drop=True)</p><h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><p>df.to_csv(“dm_sort.gff”, sep=’\t’,index=False, header=None)</p><h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><p>df.loc[i][j]</p><h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><p>df.loc[i,j]=</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;import&quot;&gt;&lt;/a&gt;import&lt;/h2&gt;&lt;p&gt;import pandas as pd&lt;br&gt;import numpy as np&lt;/p&gt;
+&lt;h2 id=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>CDS与ORF的区别</title>
@@ -66,32 +146,6 @@
     
     
       <category term="hadoop" scheme="http://yoursite.com/tags/hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo发帖</title>
-    <link href="http://yoursite.com/2020/06/02/Hexo_posts/"/>
-    <id>http://yoursite.com/2020/06/02/Hexo_posts/</id>
-    <published>2020-06-02T12:52:36.191Z</published>
-    <updated>2020-07-24T16:18:57.803Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p><h3 id="让服务器运行"><a href="#让服务器运行" class="headerlink" title="让服务器运行"></a>让服务器运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server 或者 hexo s</span><br></pre></td></tr></table></figure><p>之后你可以通过浏览器地址输入localhost:4000在本地查看博客信息。</p><p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Hexo服务器</a></p><h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate 或者 hexo g</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Hexo静态页面</a></p><h3 id="部署到远端网页"><a href="#部署到远端网页" class="headerlink" title="部署到远端网页"></a>部署到远端网页</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy 或者 hexo d</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;欢迎来到 &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt; ，这是你的第一个帖子。你可以从 &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; r
-      
-    
-    </summary>
-    
-    
-      <category term="命令大全" scheme="http://yoursite.com/categories/%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
