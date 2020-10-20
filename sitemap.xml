@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/10/18/javaweb01/</loc>
+    <loc>http://yoursite.com/2020/08/19/python_dataframe/</loc>
     
-    <lastmod>2020-10-18T12:34:06.402Z</lastmod>
+    <lastmod>2020-10-20T06:51:23.418Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/08/19/python_dataframe/</loc>
+    <loc>http://yoursite.com/2020/10/07/Hexo_posts/</loc>
     
-    <lastmod>2020-08-19T08:19:08.900Z</lastmod>
+    <lastmod>2020-10-20T06:50:17.340Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/10/18/javaweb01/</loc>
+    
+    <lastmod>2020-10-20T06:47:22.449Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/08/15/Bioinformatics001/</loc>
     
-    <lastmod>2020-08-15T05:36:40.804Z</lastmod>
+    <lastmod>2020-10-20T06:46:19.002Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://yoursite.com/2020/05/31/Git_commands/</loc>
     
     <lastmod>2020-07-25T03:48:47.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/10/07/Hexo_posts/</loc>
-    
-    <lastmod>2020-07-24T16:18:57.803Z</lastmod>
     
   </url>
   
