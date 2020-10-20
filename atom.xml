@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-20T06:47:22.449Z</updated>
+  <updated>2020-10-20T11:08:00.908Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/10/18/javaweb01/"/>
     <id>http://yoursite.com/2020/10/18/javaweb01/</id>
     <published>2020-10-18T12:30:01.000Z</published>
-    <updated>2020-10-20T06:47:22.449Z</updated>
+    <updated>2020-10-20T11:08:00.908Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP），是用于从服务器到浏览器的传输协议</p><ul><li>post发送请求数据时的中文乱码<br>$ req.setCharacterEncoding(“UTF-8”);</li><li>解决服务器响应数据乱码<br>$ resp.setContentType(“text/html;charset=UTF-8”);<br>Http是一个基于tcp/ip通信协议来传输数据（html文件、图片、查询结果等）的协议，是应用层的协议，http协议是对tcp协议的包装，其底层是tcp</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP），是用于从服务器到浏览器的传输协议</p><ul><li>post发送请求数据时的中文乱码<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ req.setCharacterEncoding(<span class="string">"UTF-8"</span>)</span><br></pre></td></tr></table></figure></li><li>解决服务器响应数据乱码<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ resp.setContentType(<span class="string">"text/html;charset=UTF-8"</span>)</span><br></pre></td></tr></table></figure>Http是一个基于tcp/ip通信协议来传输数据（html文件、图片、查询结果等）的协议，是应用层的协议，http协议是对tcp协议的包装，其底层是tcp</li></ul>]]></content>
     
     <summary type="html">
     
@@ -74,16 +74,15 @@
     <link href="http://yoursite.com/2020/08/19/python_dataframe/"/>
     <id>http://yoursite.com/2020/08/19/python_dataframe/</id>
     <published>2020-08-19T07:37:01.000Z</published>
-    <updated>2020-10-20T06:51:23.418Z</updated>
+    <updated>2020-10-20T11:10:09.550Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><p>import pandas as pd<br>import numpy as np</p><h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><p>df = pd.read_csv(r”Dmawsoni_genemodel_v1.gff”, header=None, sep=’\t’)</p><h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><p>df=df.sort_index(axis = 0,ascending = True,by = [0,3])</p><h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><p>df=df.reset_index(drop=True)</p><h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><p>df.to_csv(“dm_sort.gff”, sep=’\t’,index=False, header=None)</p><h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><p>df.loc[i][j]</p><h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><p>df.loc[i,j]=</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ import pandas as pd</span><br><span class="line">$ import numpy as np</span><br></pre></td></tr></table></figure><h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df = pd.read_csv(r<span class="string">"Dmawsoni_genemodel_v1.gff"</span>, header=None, sep=<span class="string">'\t'</span>)</span><br></pre></td></tr></table></figure><h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df=df.sort_index(axis = 0,ascending = True,by = [0,3])</span><br></pre></td></tr></table></figure><h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df=df.reset_index(drop=True)</span><br></pre></td></tr></table></figure><h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df.to_csv(<span class="string">"dm_sort.gff"</span>, sep=<span class="string">'\t'</span>,index=False, header=None)</span><br></pre></td></tr></table></figure><h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df.loc[i][j]</span><br></pre></td></tr></table></figure><h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df.loc[i,j]</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;import&quot;&gt;&lt;/a&gt;import&lt;/h2&gt;&lt;p&gt;import pandas as pd&lt;br&gt;import numpy as np&lt;/p&gt;
-&lt;h2 id=&quot;
+        &lt;h2 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;import&quot;&gt;&lt;/a&gt;import&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt
       
     
     </summary>
