@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hadoop伪分布式安装</title>
-    <url>/2020/06/30/Hadoop_install/</url>
-    <content><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p>
-<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>hadoop</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CDS与ORF的区别</title>
-    <url>/2020/08/15/Bioinformatics001/</url>
-    <content><![CDATA[<h2 id="ORF"><a href="#ORF" class="headerlink" title="ORF"></a>ORF</h2><p>ORF（开放读码框）是从一个起始密码子开始到一个终止密码子结束的一段序列；不是所有读码框都能被表达出蛋白产物。</p>
-<h2 id="CDS"><a href="#CDS" class="headerlink" title="CDS"></a>CDS</h2><p>CDS，是编码一段蛋白产物的序列。<br>CDS必定是一个ORF。但也可能包括很多ORF。反之，每个ORF不一定都是CDS。 </p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>生信</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git常用命令</title>
     <url>/2020/05/31/Git_commands/</url>
     <content><![CDATA[<p>Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。<br>对于Git仓库来说，每个人都有一个独立完整的仓库，所谓的远程仓库或是服务器仓库其实也是一个仓库，只不过这台主机24小时运行，它是一个稳定的仓库，供他人克隆、推送，也从服务器仓库中拉取别人的提交。</p>
@@ -45,21 +20,28 @@
       </tags>
   </entry>
   <entry>
-    <title>python dataframe常用函数</title>
-    <url>/2020/08/19/python_dataframe/</url>
-    <content><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><p>import pandas as pd<br>import numpy as np</p>
-<h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><p>df = pd.read_csv(r”Dmawsoni_genemodel_v1.gff”, header=None, sep=’\t’)</p>
-<h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><p>df=df.sort_index(axis = 0,ascending = True,by = [0,3])</p>
-<h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><p>df=df.reset_index(drop=True)</p>
-<h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><p>df.to_csv(“dm_sort.gff”, sep=’\t’,index=False, header=None)</p>
-<h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><p>df.loc[i][j]</p>
-<h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><p>df.loc[i,j]=</p>
+    <title>CDS与ORF的区别</title>
+    <url>/2020/08/15/Bioinformatics001/</url>
+    <content><![CDATA[<h2 id="ORF"><a href="#ORF" class="headerlink" title="ORF"></a>ORF</h2><p>ORF（开放读码框）是从一个起始密码子开始到一个终止密码子结束的一段序列；不是所有读码框都能被表达出蛋白产物。</p>
+<h2 id="CDS"><a href="#CDS" class="headerlink" title="CDS"></a>CDS</h2><p>CDS，是编码一段蛋白产物的序列。<br>CDS必定是一个ORF。但也可能包括很多ORF。反之，每个ORF不一定都是CDS。 </p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>生信</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hadoop伪分布式安装</title>
+    <url>/2020/06/30/Hadoop_install/</url>
+    <content><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p>
+<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hadoop</tag>
       </tags>
   </entry>
   <entry>
@@ -100,6 +82,24 @@
       </categories>
       <tags>
         <tag>javaweb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python dataframe常用函数</title>
+    <url>/2020/08/19/python_dataframe/</url>
+    <content><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><p>import pandas as pd<br>import numpy as np</p>
+<h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><p>df = pd.read_csv(r”Dmawsoni_genemodel_v1.gff”, header=None, sep=’\t’)</p>
+<h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><p>df=df.sort_index(axis = 0,ascending = True,by = [0,3])</p>
+<h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><p>df=df.reset_index(drop=True)</p>
+<h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><p>df.to_csv(“dm_sort.gff”, sep=’\t’,index=False, header=None)</p>
+<h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><p>df.loc[i][j]</p>
+<h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><p>df.loc[i,j]=</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
 </search>
