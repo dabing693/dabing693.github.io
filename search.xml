@@ -14,6 +14,56 @@
       </tags>
   </entry>
   <entry>
+    <title>javaweb--cookie作用原理</title>
+    <url>/2020/10/21/javaweb-cookie/</url>
+    <content><![CDATA[<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h2><p>会话跟踪是跟踪用户状态的一种技术。http协议是无状态的，需要使用会话跟踪技术来维护用户状态。会话跟踪中使用的技术有常用两种：cookie和HttpSession。</p>
+<h2 id="2-Cookie"><a href="#2-Cookie" class="headerlink" title="2 Cookie"></a>2 Cookie</h2><p>cookie是在多个客户端请求之间持久存储的一小段信息。cookie是将用户的数据存储在浏览器的技术。</p>
+<h3 id="2-1-Cookie工作原理"><a href="#2-1-Cookie工作原理" class="headerlink" title="2.1 Cookie工作原理"></a>2.1 Cookie工作原理</h3><p>在cookie技术中，servlet响应可以添加cookie，即服务器端可以向浏览器写入以及读取cookie。客户端首次访问浏览器的时候，服务器生成用户的唯一标识，将这个唯一标识，存储在客户端的浏览器的coolie中。之后，如果客户端再次请求服务器，默认情况下会带上cookie，因此我们就知道是新用户还是老用户。</p>
+<h3 id="2-2-创建Cookie"><a href="#2-2-创建Cookie" class="headerlink" title="2.2 创建Cookie"></a>2.2 创建Cookie</h3><p>cookie只能存储少量数据，cookie不支持中文。5 设置cookie有效期</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ Cookie cookie=new Cookie(<span class="string">"name"</span>,<span class="string">"zhangsan"</span>);</span><br><span class="line">$ cookie.addCookie(cookie);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-设置cookie有效期-单位，秒"><a href="#2-3-设置cookie有效期-单位，秒" class="headerlink" title="2.3 设置cookie有效期(单位，秒)"></a>2.3 设置cookie有效期(单位，秒)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cookie.setMaxAge(30);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-设置cookie的携带路径"><a href="#2-4-设置cookie的携带路径" class="headerlink" title="2.4 设置cookie的携带路径"></a>2.4 设置cookie的携带路径</h3><p>5 设置cookie有效期如果不设置cookie的path，cookie也是有路径的，这个路径就是请求的路径。</p>
+<p><img src= "/img/loading.gif" data-src="/home/lyh/Documents/java/cookie_path.png" alt="avatar"></p>
+<h3 id="2-5-设置js脚本禁止访问cookie"><a href="#2-5-设置js脚本禁止访问cookie" class="headerlink" title="2.5 设置js脚本禁止访问cookie"></a>2.5 设置js脚本禁止访问cookie</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cookie.setCookieOnly(<span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-6-获取cookie、删除cookie"><a href="#2-6-获取cookie、删除cookie" class="headerlink" title="2.6 获取cookie、删除cookie"></a>2.6 获取cookie、删除cookie</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cookie[] cookies=request.getCookies();</span><br><span class="line"><span class="keyword">for</span>(Cookie cookie <span class="keyword">in</span> cookies)&#123;</span><br><span class="line"> 	System.out.println(cookie.getName()+<span class="string">"--&gt;"</span>+cookie.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cookie.setMaxAge(0);</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-HttpSession"><a href="#3-HttpSession" class="headerlink" title="3 HttpSession"></a>3 HttpSession</h2><p>唯一身份id由服务器生成，并保存在服务器的内存中（Tomcat的运行内容中）。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;获取HttpSession,如果没有，则会创建</span><br><span class="line">HttpSession session&#x3D;request.getSession();</span><br><span class="line">&#x2F;&#x2F;没有也不会创建，会报错500</span><br><span class="line">HttpSession session&#x3D;request.getSession(false);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>javaweb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hadoop伪分布式安装</title>
+    <url>/2020/06/30/Hadoop_install/</url>
+    <content><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p>
+<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hadoop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git常用命令</title>
     <url>/2020/05/31/Git_commands/</url>
     <content><![CDATA[<p>Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。<br>对于Git仓库来说，每个人都有一个独立完整的仓库，所谓的远程仓库或是服务器仓库其实也是一个仓库，只不过这台主机24小时运行，它是一个稳定的仓库，供他人克隆、推送，也从服务器仓库中拉取别人的提交。</p>
@@ -30,18 +80,6 @@
       </categories>
       <tags>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hadoop伪分布式安装</title>
-    <url>/2020/06/30/Hadoop_install/</url>
-    <content><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p>
-<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>hadoop</tag>
       </tags>
   </entry>
   <entry>

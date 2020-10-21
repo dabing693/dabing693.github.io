@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/10/21/javaweb-cookie/</loc>
+    
+    <lastmod>2020-10-21T02:51:45.678Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/08/19/python_dataframe/</loc>
     
     <lastmod>2020-10-20T11:10:09.550Z</lastmod>

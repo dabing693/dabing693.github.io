@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-20T11:08:00.908Z</updated>
+  <updated>2020-10-21T02:51:45.678Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javaweb--cookie作用原理</title>
+    <link href="http://yoursite.com/2020/10/21/javaweb-cookie/"/>
+    <id>http://yoursite.com/2020/10/21/javaweb-cookie/</id>
+    <published>2020-10-21T02:51:01.000Z</published>
+    <updated>2020-10-21T02:51:45.678Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h2><p>会话跟踪是跟踪用户状态的一种技术。http协议是无状态的，需要使用会话跟踪技术来维护用户状态。会话跟踪中使用的技术有常用两种：cookie和HttpSession。</p><h2 id="2-Cookie"><a href="#2-Cookie" class="headerlink" title="2 Cookie"></a>2 Cookie</h2><p>cookie是在多个客户端请求之间持久存储的一小段信息。cookie是将用户的数据存储在浏览器的技术。</p><h3 id="2-1-Cookie工作原理"><a href="#2-1-Cookie工作原理" class="headerlink" title="2.1 Cookie工作原理"></a>2.1 Cookie工作原理</h3><p>在cookie技术中，servlet响应可以添加cookie，即服务器端可以向浏览器写入以及读取cookie。客户端首次访问浏览器的时候，服务器生成用户的唯一标识，将这个唯一标识，存储在客户端的浏览器的coolie中。之后，如果客户端再次请求服务器，默认情况下会带上cookie，因此我们就知道是新用户还是老用户。</p><h3 id="2-2-创建Cookie"><a href="#2-2-创建Cookie" class="headerlink" title="2.2 创建Cookie"></a>2.2 创建Cookie</h3><p>cookie只能存储少量数据，cookie不支持中文。5 设置cookie有效期</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ Cookie cookie=new Cookie(<span class="string">"name"</span>,<span class="string">"zhangsan"</span>);</span><br><span class="line">$ cookie.addCookie(cookie);</span><br></pre></td></tr></table></figure><h3 id="2-3-设置cookie有效期-单位，秒"><a href="#2-3-设置cookie有效期-单位，秒" class="headerlink" title="2.3 设置cookie有效期(单位，秒)"></a>2.3 设置cookie有效期(单位，秒)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cookie.setMaxAge(30);</span><br></pre></td></tr></table></figure><h3 id="2-4-设置cookie的携带路径"><a href="#2-4-设置cookie的携带路径" class="headerlink" title="2.4 设置cookie的携带路径"></a>2.4 设置cookie的携带路径</h3><p>5 设置cookie有效期如果不设置cookie的path，cookie也是有路径的，这个路径就是请求的路径。</p><p><img src= "/img/loading.gif" data-src="/home/lyh/Documents/java/cookie_path.png" alt="avatar"></p><h3 id="2-5-设置js脚本禁止访问cookie"><a href="#2-5-设置js脚本禁止访问cookie" class="headerlink" title="2.5 设置js脚本禁止访问cookie"></a>2.5 设置js脚本禁止访问cookie</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cookie.setCookieOnly(<span class="literal">true</span>);</span><br></pre></td></tr></table></figure><h3 id="2-6-获取cookie、删除cookie"><a href="#2-6-获取cookie、删除cookie" class="headerlink" title="2.6 获取cookie、删除cookie"></a>2.6 获取cookie、删除cookie</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Cookie[] cookies=request.getCookies();</span><br><span class="line"><span class="keyword">for</span>(Cookie cookie <span class="keyword">in</span> cookies)&#123;</span><br><span class="line"> System.out.println(cookie.getName()+<span class="string">"--&gt;"</span>+cookie.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cookie.setMaxAge(0);</span><br></pre></td></tr></table></figure><h2 id="3-HttpSession"><a href="#3-HttpSession" class="headerlink" title="3 HttpSession"></a>3 HttpSession</h2><p>唯一身份id由服务器生成，并保存在服务器的内存中（Tomcat的运行内容中）。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;获取HttpSession,如果没有，则会创建</span><br><span class="line">HttpSession session&#x3D;request.getSession();</span><br><span class="line">&#x2F;&#x2F;没有也不会创建，会报错500</span><br><span class="line">HttpSession session&#x3D;request.getSession(false);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-介绍&quot;&gt;&lt;a href=&quot;#1-介绍&quot; class=&quot;headerlink&quot; title=&quot;1 介绍&quot;&gt;&lt;/a&gt;1 介绍&lt;/h2&gt;&lt;p&gt;会话跟踪是跟踪用户状态的一种技术。http协议是无状态的，需要使用会话跟踪技术来维护用户状态。会话跟踪中使用的技术有常用两种
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="javaweb" scheme="http://yoursite.com/tags/javaweb/"/>
+    
+  </entry>
   
   <entry>
     <title>javaweb--http协议</title>
