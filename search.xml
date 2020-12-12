@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git常用命令</title>
-    <url>/2020/05/31/Git_commands/</url>
-    <content><![CDATA[<p>Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。<br>对于Git仓库来说，每个人都有一个独立完整的仓库，所谓的远程仓库或是服务器仓库其实也是一个仓库，只不过这台主机24小时运行，它是一个稳定的仓库，供他人克隆、推送，也从服务器仓库中拉取别人的提交。</p>
-<h2 id="新建本地仓库"><a href="#新建本地仓库" class="headerlink" title="新建本地仓库"></a>新建本地仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-<p>此命令初始化一个新本地仓库，它在工作目录下生成一个名为.git的隐藏文件夹。</p>
-<h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add [filename]</span><br></pre></td></tr></table></figure>
-<h2 id="生成一个提交"><a href="#生成一个提交" class="headerlink" title="生成一个提交"></a>生成一个提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"xxx"</span></span><br></pre></td></tr></table></figure>
-<p>在git add 的基础上调用commit生成一个提交。</p>
-<h2 id="本地仓库提交"><a href="#本地仓库提交" class="headerlink" title="本地仓库提交"></a>本地仓库提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push -u [origin] master</span><br></pre></td></tr></table></figure>
-<p>把本地仓库push到github上面，此步骤需要你输入帐号和密码</p>
-]]></content>
-      <categories>
-        <category>命令大全</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo发帖</title>
     <url>/2020/10/07/Hexo_posts/</url>
     <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p>
@@ -44,22 +25,72 @@
       </tags>
   </entry>
   <entry>
-    <title>python dataframe常用函数</title>
-    <url>/2020/08/19/python_dataframe/</url>
-    <content><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ import pandas as pd</span><br><span class="line">$ import numpy as np</span><br></pre></td></tr></table></figure>
-<h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df = pd.read_csv(r<span class="string">"Dmawsoni_genemodel_v1.gff"</span>, header=None, sep=<span class="string">'\t'</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df=df.sort_index(axis = 0,ascending = True,by = [0,3])</span><br></pre></td></tr></table></figure>
-<h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df=df.reset_index(drop=True)</span><br></pre></td></tr></table></figure>
-<h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df.to_csv(<span class="string">"dm_sort.gff"</span>, sep=<span class="string">'\t'</span>,index=False, header=None)</span><br></pre></td></tr></table></figure>
-<h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df.loc[i][j]</span><br></pre></td></tr></table></figure>
-<h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df.loc[i,j]</span><br></pre></td></tr></table></figure>
+    <title>Git常用命令</title>
+    <url>/2020/05/31/Git_commands/</url>
+    <content><![CDATA[<p>Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。<br>对于Git仓库来说，每个人都有一个独立完整的仓库，所谓的远程仓库或是服务器仓库其实也是一个仓库，只不过这台主机24小时运行，它是一个稳定的仓库，供他人克隆、推送，也从服务器仓库中拉取别人的提交。</p>
+<h2 id="新建本地仓库"><a href="#新建本地仓库" class="headerlink" title="新建本地仓库"></a>新建本地仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>此命令初始化一个新本地仓库，它在工作目录下生成一个名为.git的隐藏文件夹。</p>
+<h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add [filename]</span><br></pre></td></tr></table></figure>
+<h2 id="生成一个提交"><a href="#生成一个提交" class="headerlink" title="生成一个提交"></a>生成一个提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"xxx"</span></span><br></pre></td></tr></table></figure>
+<p>在git add 的基础上调用commit生成一个提交。</p>
+<h2 id="本地仓库提交"><a href="#本地仓库提交" class="headerlink" title="本地仓库提交"></a>本地仓库提交</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push -u [origin] master</span><br></pre></td></tr></table></figure>
+<p>把本地仓库push到github上面，此步骤需要你输入帐号和密码</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>命令大全</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>javaweb入门</title>
+    <url>/2020/12/12/javaweb%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="Jsp环境搭建及入门"><a href="#Jsp环境搭建及入门" class="headerlink" title="Jsp环境搭建及入门"></a>Jsp环境搭建及入门</h1><h2 id="1-Jsp：动态网页"><a href="#1-Jsp：动态网页" class="headerlink" title="1 Jsp：动态网页"></a>1 Jsp：动态网页</h2><p>静态、动态区别：</p>
+<p>（1）是否随着时间、地点、用户操作改变而改变</p>
+<p>（2）动态网页需要使用到服务端脚本语言（jsp）</p>
+<h2 id="2-架构"><a href="#2-架构" class="headerlink" title="2 架构"></a>2 架构</h2><p>CS：client server</p>
+<p>CS不足：</p>
+<p>（1）如果软件升级，那么全部软件需要升级</p>
+<p>（2）维护麻烦，需要维护每一台客户端软件</p>
+<p>（3）每一台客户端都需要安装客户端软件</p>
+<p>BS：browser server</p>
+<p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsdm521u.jpg" alt="img"></p>
+<h2 id="3-tomcat目录结构"><a href="#3-tomcat目录结构" class="headerlink" title="3 tomcat目录结构"></a>3 tomcat目录结构</h2><p>Bin：可执行文件</p>
+<p>Conf：配置文件</p>
+<p>Webapps：可执行项目</p>
+<p>Work：存放由jsp翻译的java，以及编译成的class文件(Jsp-&gt;java-&gt;class)</p>
+<h2 id="4-配置tomcat"><a href="#4-配置tomcat" class="headerlink" title="4 配置tomcat"></a>4 配置tomcat</h2><p>配置jdk（必须配置JAVA_HOME)</p>
+<h2 id="5-常见状态码"><a href="#5-常见状态码" class="headerlink" title="5 常见状态码"></a>5 常见状态码</h2><p>200：一切正常</p>
+<p>300/301：页面重定向</p>
+<p>404：资源不存在</p>
+<p>403：权限不足</p>
+<p>500：服务器内部错误（代码写错）</p>
+<p>Jsp，其实就是在html中嵌套的java代码</p>
+<p>在项目WEB-INFO中的web.xml中可设置默认初始页面</p>
+<h1 id="虚拟路径和虚拟主机"><a href="#虚拟路径和虚拟主机" class="headerlink" title="虚拟路径和虚拟主机"></a>虚拟路径和虚拟主机</h1><h2 id="1-虚拟路径"><a href="#1-虚拟路径" class="headerlink" title="1 虚拟路径"></a>1 虚拟路径</h2><p>（1）方式1</p>
+<p>将web项目配置到webapps以外的目录，conf/server.xml最底部Host标签中配置</p>
+<Context docbase="/home/lyh/IdeaProjects/JspProject" path="JspProject">
+
+<p>docBase:实际路径</p>
+<p>Path：虚拟路径，相对于webapps</p>
+<p>（2）方式二</p>
+<p>在tomcat/conf/Catalina/localhost里面创建：项目名.xml。在里面添加：</p>
+<Context docbase="/home/lyh/IdeaProjects" path="JspProject">
+
+<h2 id="2-虚拟主机"><a href="#2-虚拟主机" class="headerlink" title="2 虚拟主机"></a>2 虚拟主机</h2><p>通过<a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a>访问主机</p>
+<p>1、conf/server.xml</p>
+<p>2、<img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsmsb3mt.jpg" alt="img"></p>
+<p>3、<img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsC9dZBw.jpg" alt="img"></p>
+<p>4、/etc/hosts添加：127.0.0.1    <a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a></p>
+<p><a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a> -&gt; hosts找映射 -&gt; server.xml找engine的defaulthost -&gt; 通过”/”映射到设置的项目路径</p>
+<h1 id="jsp执行流程"><a href="#jsp执行流程" class="headerlink" title="jsp执行流程"></a>jsp执行流程</h1><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpss3KLdv.jpg" alt="img"> </p>
+<p>（1）第一次访问：服务端流程：.jsp（翻译）-&gt; .java （编译，servlet文件）-&gt; .class(在work/项目名/下面可以找到.java和.class文件</p>
+<p>（2）第二次访问：直接访问.class文件（如果服务端代码改了，将重新翻译和编译）</p>
+<p>（3）jsp和servlet文件可以相互装换</p>
+<p>（4）因为第一次访问会有编译和翻译的过程，所以比较慢，后期访问可以直接访问class，所以比较快</p>
+<p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wps6B1Yyu.jpg" alt="img"> </p>
+</Context></Context>]]></content>
   </entry>
   <entry>
     <title>CDS与ORF的区别</title>
@@ -72,6 +103,18 @@
       </categories>
       <tags>
         <tag>生信</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hadoop伪分布式安装</title>
+    <url>/2020/06/30/backup/Hadoop_install/</url>
+    <content><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p>
+<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hadoop</tag>
       </tags>
   </entry>
   <entry>
@@ -113,18 +156,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hadoop伪分布式安装</title>
-    <url>/2020/06/30/backup/Hadoop_install/</url>
-    <content><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p>
-<h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>hadoop</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>javaweb--http协议</title>
     <url>/2020/10/18/backup/javaweb01/</url>
     <content><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP），是用于从服务器到浏览器的传输协议</p>
@@ -139,6 +170,24 @@ Http是一个基于tcp/ip通信协议来传输数据（html文件、图片、查
       </categories>
       <tags>
         <tag>javaweb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python dataframe常用函数</title>
+    <url>/2020/08/19/python/python_dataframe/</url>
+    <content><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ import pandas as pd</span><br><span class="line">$ import numpy as np</span><br></pre></td></tr></table></figure>
+<h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df = pd.read_csv(r<span class="string">"Dmawsoni_genemodel_v1.gff"</span>, header=None, sep=<span class="string">'\t'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df=df.sort_index(axis = 0,ascending = True,by = [0,3])</span><br></pre></td></tr></table></figure>
+<h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df=df.reset_index(drop=True)</span><br></pre></td></tr></table></figure>
+<h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df.to_csv(<span class="string">"dm_sort.gff"</span>, sep=<span class="string">'\t'</span>,index=False, header=None)</span><br></pre></td></tr></table></figure>
+<h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df.loc[i][j]</span><br></pre></td></tr></table></figure>
+<h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ df.loc[i,j]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
 </search>

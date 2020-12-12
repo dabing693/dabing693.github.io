@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-21T03:48:05.949Z</updated>
+  <updated>2020-12-12T06:45:45.185Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javaweb入门</title>
+    <link href="http://yoursite.com/2020/12/12/javaweb%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2020/12/12/javaweb%E5%85%A5%E9%97%A8/</id>
+    <published>2020-12-12T06:26:40.723Z</published>
+    <updated>2020-12-12T06:45:45.185Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Jsp环境搭建及入门"><a href="#Jsp环境搭建及入门" class="headerlink" title="Jsp环境搭建及入门"></a>Jsp环境搭建及入门</h1><h2 id="1-Jsp：动态网页"><a href="#1-Jsp：动态网页" class="headerlink" title="1 Jsp：动态网页"></a>1 Jsp：动态网页</h2><p>静态、动态区别：</p><p>（1）是否随着时间、地点、用户操作改变而改变</p><p>（2）动态网页需要使用到服务端脚本语言（jsp）</p><h2 id="2-架构"><a href="#2-架构" class="headerlink" title="2 架构"></a>2 架构</h2><p>CS：client server</p><p>CS不足：</p><p>（1）如果软件升级，那么全部软件需要升级</p><p>（2）维护麻烦，需要维护每一台客户端软件</p><p>（3）每一台客户端都需要安装客户端软件</p><p>BS：browser server</p><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsdm521u.jpg" alt="img"></p><h2 id="3-tomcat目录结构"><a href="#3-tomcat目录结构" class="headerlink" title="3 tomcat目录结构"></a>3 tomcat目录结构</h2><p>Bin：可执行文件</p><p>Conf：配置文件</p><p>Webapps：可执行项目</p><p>Work：存放由jsp翻译的java，以及编译成的class文件(Jsp-&gt;java-&gt;class)</p><h2 id="4-配置tomcat"><a href="#4-配置tomcat" class="headerlink" title="4 配置tomcat"></a>4 配置tomcat</h2><p>配置jdk（必须配置JAVA_HOME)</p><h2 id="5-常见状态码"><a href="#5-常见状态码" class="headerlink" title="5 常见状态码"></a>5 常见状态码</h2><p>200：一切正常</p><p>300/301：页面重定向</p><p>404：资源不存在</p><p>403：权限不足</p><p>500：服务器内部错误（代码写错）</p><p>Jsp，其实就是在html中嵌套的java代码</p><p>在项目WEB-INFO中的web.xml中可设置默认初始页面</p><h1 id="虚拟路径和虚拟主机"><a href="#虚拟路径和虚拟主机" class="headerlink" title="虚拟路径和虚拟主机"></a>虚拟路径和虚拟主机</h1><h2 id="1-虚拟路径"><a href="#1-虚拟路径" class="headerlink" title="1 虚拟路径"></a>1 虚拟路径</h2><p>（1）方式1</p><p>将web项目配置到webapps以外的目录，conf/server.xml最底部Host标签中配置</p><Context docbase="/home/lyh/IdeaProjects/JspProject" path="JspProject"><p>docBase:实际路径</p><p>Path：虚拟路径，相对于webapps</p><p>（2）方式二</p><p>在tomcat/conf/Catalina/localhost里面创建：项目名.xml。在里面添加：</p><Context docbase="/home/lyh/IdeaProjects" path="JspProject"><h2 id="2-虚拟主机"><a href="#2-虚拟主机" class="headerlink" title="2 虚拟主机"></a>2 虚拟主机</h2><p>通过<a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a>访问主机</p><p>1、conf/server.xml</p><p>2、<img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsmsb3mt.jpg" alt="img"></p><p>3、<img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsC9dZBw.jpg" alt="img"></p><p>4、/etc/hosts添加：127.0.0.1    <a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a></p><p><a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a> -&gt; hosts找映射 -&gt; server.xml找engine的defaulthost -&gt; 通过”/”映射到设置的项目路径</p><h1 id="jsp执行流程"><a href="#jsp执行流程" class="headerlink" title="jsp执行流程"></a>jsp执行流程</h1><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpss3KLdv.jpg" alt="img"> </p><p>（1）第一次访问：服务端流程：.jsp（翻译）-&gt; .java （编译，servlet文件）-&gt; .class(在work/项目名/下面可以找到.java和.class文件</p><p>（2）第二次访问：直接访问.class文件（如果服务端代码改了，将重新翻译和编译）</p><p>（3）jsp和servlet文件可以相互装换</p><p>（4）因为第一次访问会有编译和翻译的过程，所以比较慢，后期访问可以直接访问class，所以比较快</p><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wps6B1Yyu.jpg" alt="img"> </p></Context></Context>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Jsp环境搭建及入门&quot;&gt;&lt;a href=&quot;#Jsp环境搭建及入门&quot; class=&quot;headerlink&quot; title=&quot;Jsp环境搭建及入门&quot;&gt;&lt;/a&gt;Jsp环境搭建及入门&lt;/h1&gt;&lt;h2 id=&quot;1-Jsp：动态网页&quot;&gt;&lt;a href=&quot;#1-Jsp：动态网页&quot;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>javaweb--cookie作用原理</title>
@@ -97,8 +119,8 @@
   
   <entry>
     <title>python dataframe常用函数</title>
-    <link href="http://yoursite.com/2020/08/19/python_dataframe/"/>
-    <id>http://yoursite.com/2020/08/19/python_dataframe/</id>
+    <link href="http://yoursite.com/2020/08/19/python/python_dataframe/"/>
+    <id>http://yoursite.com/2020/08/19/python/python_dataframe/</id>
     <published>2020-08-19T07:37:01.000Z</published>
     <updated>2020-10-20T11:10:09.550Z</updated>
     
