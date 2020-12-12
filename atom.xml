@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-12-12T06:45:45.185Z</updated>
+  <updated>2020-12-12T07:00:58.649Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>javaweb入门</title>
+    <title>Jsp环境搭建及入门</title>
     <link href="http://yoursite.com/2020/12/12/javaweb%E5%85%A5%E9%97%A8/"/>
     <id>http://yoursite.com/2020/12/12/javaweb%E5%85%A5%E9%97%A8/</id>
     <published>2020-12-12T06:26:40.723Z</published>
-    <updated>2020-12-12T06:45:45.185Z</updated>
+    <updated>2020-12-12T07:00:58.649Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Jsp环境搭建及入门"><a href="#Jsp环境搭建及入门" class="headerlink" title="Jsp环境搭建及入门"></a>Jsp环境搭建及入门</h1><h2 id="1-Jsp：动态网页"><a href="#1-Jsp：动态网页" class="headerlink" title="1 Jsp：动态网页"></a>1 Jsp：动态网页</h2><p>静态、动态区别：</p><p>（1）是否随着时间、地点、用户操作改变而改变</p><p>（2）动态网页需要使用到服务端脚本语言（jsp）</p><h2 id="2-架构"><a href="#2-架构" class="headerlink" title="2 架构"></a>2 架构</h2><p>CS：client server</p><p>CS不足：</p><p>（1）如果软件升级，那么全部软件需要升级</p><p>（2）维护麻烦，需要维护每一台客户端软件</p><p>（3）每一台客户端都需要安装客户端软件</p><p>BS：browser server</p><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsdm521u.jpg" alt="img"></p><h2 id="3-tomcat目录结构"><a href="#3-tomcat目录结构" class="headerlink" title="3 tomcat目录结构"></a>3 tomcat目录结构</h2><p>Bin：可执行文件</p><p>Conf：配置文件</p><p>Webapps：可执行项目</p><p>Work：存放由jsp翻译的java，以及编译成的class文件(Jsp-&gt;java-&gt;class)</p><h2 id="4-配置tomcat"><a href="#4-配置tomcat" class="headerlink" title="4 配置tomcat"></a>4 配置tomcat</h2><p>配置jdk（必须配置JAVA_HOME)</p><h2 id="5-常见状态码"><a href="#5-常见状态码" class="headerlink" title="5 常见状态码"></a>5 常见状态码</h2><p>200：一切正常</p><p>300/301：页面重定向</p><p>404：资源不存在</p><p>403：权限不足</p><p>500：服务器内部错误（代码写错）</p><p>Jsp，其实就是在html中嵌套的java代码</p><p>在项目WEB-INFO中的web.xml中可设置默认初始页面</p><h1 id="虚拟路径和虚拟主机"><a href="#虚拟路径和虚拟主机" class="headerlink" title="虚拟路径和虚拟主机"></a>虚拟路径和虚拟主机</h1><h2 id="1-虚拟路径"><a href="#1-虚拟路径" class="headerlink" title="1 虚拟路径"></a>1 虚拟路径</h2><p>（1）方式1</p><p>将web项目配置到webapps以外的目录，conf/server.xml最底部Host标签中配置</p><Context docbase="/home/lyh/IdeaProjects/JspProject" path="JspProject"><p>docBase:实际路径</p><p>Path：虚拟路径，相对于webapps</p><p>（2）方式二</p><p>在tomcat/conf/Catalina/localhost里面创建：项目名.xml。在里面添加：</p><Context docbase="/home/lyh/IdeaProjects" path="JspProject"><h2 id="2-虚拟主机"><a href="#2-虚拟主机" class="headerlink" title="2 虚拟主机"></a>2 虚拟主机</h2><p>通过<a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a>访问主机</p><p>1、conf/server.xml</p><p>2、<img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsmsb3mt.jpg" alt="img"></p><p>3、<img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsC9dZBw.jpg" alt="img"></p><p>4、/etc/hosts添加：127.0.0.1    <a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a></p><p><a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a> -&gt; hosts找映射 -&gt; server.xml找engine的defaulthost -&gt; 通过”/”映射到设置的项目路径</p><h1 id="jsp执行流程"><a href="#jsp执行流程" class="headerlink" title="jsp执行流程"></a>jsp执行流程</h1><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpss3KLdv.jpg" alt="img"> </p><p>（1）第一次访问：服务端流程：.jsp（翻译）-&gt; .java （编译，servlet文件）-&gt; .class(在work/项目名/下面可以找到.java和.class文件</p><p>（2）第二次访问：直接访问.class文件（如果服务端代码改了，将重新翻译和编译）</p><p>（3）jsp和servlet文件可以相互装换</p><p>（4）因为第一次访问会有编译和翻译的过程，所以比较慢，后期访问可以直接访问class，所以比较快</p><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wps6B1Yyu.jpg" alt="img"> </p></Context></Context>]]></content>
+    <content type="html"><![CDATA[<h1 id="Jsp环境搭建及入门"><a href="#Jsp环境搭建及入门" class="headerlink" title="Jsp环境搭建及入门"></a>Jsp环境搭建及入门</h1><h2 id="1-Jsp：动态网页"><a href="#1-Jsp：动态网页" class="headerlink" title="1 Jsp：动态网页"></a>1 Jsp：动态网页</h2><p>静态、动态区别：</p><p>（1）是否随着时间、地点、用户操作改变而改变</p><p>（2）动态网页需要使用到服务端脚本语言（jsp）</p><h2 id="2-架构"><a href="#2-架构" class="headerlink" title="2 架构"></a>2 架构</h2><p>CS：client server</p><p>CS不足：</p><p>（1）如果软件升级，那么全部软件需要升级</p><p>（2）维护麻烦，需要维护每一台客户端软件</p><p>（3）每一台客户端都需要安装客户端软件</p><p>BS：browser server</p><p><img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gll2y43y08j207e049dg3.jpg" alt="img"></p><h2 id="3-tomcat目录结构"><a href="#3-tomcat目录结构" class="headerlink" title="3 tomcat目录结构"></a>3 tomcat目录结构</h2><p>Bin：可执行文件</p><p>Conf：配置文件</p><p>Webapps：可执行项目</p><p>Work：存放由jsp翻译的java，以及编译成的class文件(Jsp-&gt;java-&gt;class)</p><h2 id="4-配置tomcat"><a href="#4-配置tomcat" class="headerlink" title="4 配置tomcat"></a>4 配置tomcat</h2><p>配置jdk（必须配置JAVA_HOME)</p><h2 id="5-常见状态码"><a href="#5-常见状态码" class="headerlink" title="5 常见状态码"></a>5 常见状态码</h2><p>200：一切正常</p><p>300/301：页面重定向</p><p>404：资源不存在</p><p>403：权限不足</p><p>500：服务器内部错误（代码写错）</p><p>Jsp，其实就是在html中嵌套的java代码</p><p>在项目WEB-INFO中的web.xml中可设置默认初始页面</p><h1 id="虚拟路径和虚拟主机"><a href="#虚拟路径和虚拟主机" class="headerlink" title="虚拟路径和虚拟主机"></a>虚拟路径和虚拟主机</h1><h2 id="1-虚拟路径"><a href="#1-虚拟路径" class="headerlink" title="1 虚拟路径"></a>1 虚拟路径</h2><p>（1）方式1</p><p>将web项目配置到webapps以外的目录，conf/server.xml最底部Host标签中配置</p><Context docbase="/home/lyh/IdeaProjects/JspProject" path="JspProject"><p>docBase:实际路径</p><p>Path：虚拟路径，相对于webapps</p><p>（2）方式二</p><p>在tomcat/conf/Catalina/localhost里面创建：项目名.xml。在里面添加：</p><Context docbase="/home/lyh/IdeaProjects" path="JspProject"><h2 id="2-虚拟主机"><a href="#2-虚拟主机" class="headerlink" title="2 虚拟主机"></a>2 虚拟主机</h2><p>通过<a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a>访问主机</p><p>1、conf/server.xml</p><p>2、<img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gll2yv9x3nj20fe01adg5.jpg" alt="img"></p><p>3、<img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gll2zqbgxdj20ew00vt8u.jpg" alt="img"></p><p>4、/etc/hosts添加：127.0.0.1    <a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a></p><p><a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a> -&gt; hosts找映射 -&gt; server.xml找engine的defaulthost -&gt; 通过”/”映射到设置的项目路径</p><h1 id="jsp执行流程"><a href="#jsp执行流程" class="headerlink" title="jsp执行流程"></a>jsp执行流程</h1><p><img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gll30ajnhej20bh04g74r.jpg" alt="img"> </p><p>（1）第一次访问：服务端流程：.jsp（翻译）-&gt; .java （编译，servlet文件）-&gt; .class(在work/项目名/下面可以找到.java和.class文件</p><p>（2）第二次访问：直接访问.class文件（如果服务端代码改了，将重新翻译和编译）</p><p>（3）jsp和servlet文件可以相互装换</p><p>（4）因为第一次访问会有编译和翻译的过程，所以比较慢，后期访问可以直接访问class，所以比较快</p></Context></Context>]]></content>
     
     <summary type="html">
     
@@ -35,59 +35,10 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>javaweb--cookie作用原理</title>
-    <link href="http://yoursite.com/2020/10/21/backup/javaweb-cookie/"/>
-    <id>http://yoursite.com/2020/10/21/backup/javaweb-cookie/</id>
-    <published>2020-10-21T02:51:01.000Z</published>
-    <updated>2020-10-21T03:48:05.949Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h2><p>会话跟踪是跟踪用户状态的一种技术。http协议是无状态的，需要使用会话跟踪技术来维护用户状态。会话跟踪中使用的技术有常用两种：cookie和HttpSession。</p><h2 id="2-Cookie"><a href="#2-Cookie" class="headerlink" title="2 Cookie"></a>2 Cookie</h2><p>cookie是在多个客户端请求之间持久存储的一小段信息。cookie是将用户的数据存储在浏览器的技术。</p><h3 id="2-1-Cookie工作原理"><a href="#2-1-Cookie工作原理" class="headerlink" title="2.1 Cookie工作原理"></a>2.1 Cookie工作原理</h3><p>在cookie技术中，servlet响应可以添加cookie，即服务器端可以向浏览器写入以及读取cookie。客户端首次访问浏览器的时候，服务器生成用户的唯一标识，将这个唯一标识，存储在客户端的浏览器的coolie中。之后，如果客户端再次请求服务器，默认情况下会带上cookie，因此我们就知道是新用户还是老用户。</p><h3 id="2-2-创建Cookie"><a href="#2-2-创建Cookie" class="headerlink" title="2.2 创建Cookie"></a>2.2 创建Cookie</h3><p>cookie只能存储少量数据，cookie不支持中文。5 设置cookie有效期</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ Cookie cookie=new Cookie(<span class="string">"name"</span>,<span class="string">"zhangsan"</span>);</span><br><span class="line">$ cookie.addCookie(cookie);</span><br></pre></td></tr></table></figure><h3 id="2-3-设置cookie有效期-单位，秒"><a href="#2-3-设置cookie有效期-单位，秒" class="headerlink" title="2.3 设置cookie有效期(单位，秒)"></a>2.3 设置cookie有效期(单位，秒)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cookie.setMaxAge(30);</span><br></pre></td></tr></table></figure><h3 id="2-4-设置cookie的携带路径"><a href="#2-4-设置cookie的携带路径" class="headerlink" title="2.4 设置cookie的携带路径"></a>2.4 设置cookie的携带路径</h3><p>5 设置cookie有效期如果不设置cookie的path，cookie也是有路径的，这个路径就是请求的路径。</p><p><img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gjwt790e3xj20ob0c7n3i.jpg" alt="avatar"></p><h3 id="2-5-设置js脚本禁止访问cookie"><a href="#2-5-设置js脚本禁止访问cookie" class="headerlink" title="2.5 设置js脚本禁止访问cookie"></a>2.5 设置js脚本禁止访问cookie</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cookie.setCookieOnly(<span class="literal">true</span>);</span><br></pre></td></tr></table></figure><h3 id="2-6-获取cookie、删除cookie"><a href="#2-6-获取cookie、删除cookie" class="headerlink" title="2.6 获取cookie、删除cookie"></a>2.6 获取cookie、删除cookie</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Cookie[] cookies=request.getCookies();</span><br><span class="line"><span class="keyword">for</span>(Cookie cookie <span class="keyword">in</span> cookies)&#123;</span><br><span class="line"> System.out.println(cookie.getName()+<span class="string">"--&gt;"</span>+cookie.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cookie.setMaxAge(0);</span><br></pre></td></tr></table></figure><h2 id="3-HttpSession"><a href="#3-HttpSession" class="headerlink" title="3 HttpSession"></a>3 HttpSession</h2><p>唯一身份id由服务器生成，并保存在服务器的内存中（Tomcat的运行内容中）。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;获取HttpSession,如果没有，则会创建</span><br><span class="line">HttpSession session&#x3D;request.getSession();</span><br><span class="line">&#x2F;&#x2F;没有也不会创建，会报错500</span><br><span class="line">HttpSession session&#x3D;request.getSession(false);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;1-介绍&quot;&gt;&lt;a href=&quot;#1-介绍&quot; class=&quot;headerlink&quot; title=&quot;1 介绍&quot;&gt;&lt;/a&gt;1 介绍&lt;/h2&gt;&lt;p&gt;会话跟踪是跟踪用户状态的一种技术。http协议是无状态的，需要使用会话跟踪技术来维护用户状态。会话跟踪中使用的技术有常用两种
-      
-    
-    </summary>
+      <category term="javaweb" scheme="http://yoursite.com/categories/javaweb/"/>
     
     
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-      <category term="javaweb" scheme="http://yoursite.com/tags/javaweb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>javaweb--http协议</title>
-    <link href="http://yoursite.com/2020/10/18/backup/javaweb01/"/>
-    <id>http://yoursite.com/2020/10/18/backup/javaweb01/</id>
-    <published>2020-10-18T12:30:01.000Z</published>
-    <updated>2020-10-20T11:08:00.908Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP），是用于从服务器到浏览器的传输协议</p><ul><li>post发送请求数据时的中文乱码<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ req.setCharacterEncoding(<span class="string">"UTF-8"</span>)</span><br></pre></td></tr></table></figure></li><li>解决服务器响应数据乱码<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ resp.setContentType(<span class="string">"text/html;charset=UTF-8"</span>)</span><br></pre></td></tr></table></figure>Http是一个基于tcp/ip通信协议来传输数据（html文件、图片、查询结果等）的协议，是应用层的协议，http协议是对tcp协议的包装，其底层是tcp</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP），是用于从服务器到浏览器的传输协议&lt;/p&gt;
-&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-      <category term="javaweb" scheme="http://yoursite.com/tags/javaweb/"/>
+      <category term="tomcat" scheme="http://yoursite.com/tags/tomcat/"/>
     
   </entry>
   
@@ -96,7 +47,7 @@
     <link href="http://yoursite.com/2020/10/07/Hexo_posts/"/>
     <id>http://yoursite.com/2020/10/07/Hexo_posts/</id>
     <published>2020-10-07T04:50:41.242Z</published>
-    <updated>2020-10-20T06:50:17.340Z</updated>
+    <updated>2020-12-12T06:51:49.615Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p><h3 id="让服务器运行"><a href="#让服务器运行" class="headerlink" title="让服务器运行"></a>让服务器运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server 或者 hexo s</span><br></pre></td></tr></table></figure><p>之后你可以通过浏览器地址输入localhost:4000在本地查看博客信息。</p><p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Hexo服务器</a></p><h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate 或者 hexo g</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Hexo静态页面</a></p><h3 id="部署到远端网页"><a href="#部署到远端网页" class="headerlink" title="部署到远端网页"></a>部署到远端网页</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy 或者 hexo d</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>]]></content>
     
@@ -122,7 +73,7 @@
     <link href="http://yoursite.com/2020/08/19/python/python_dataframe/"/>
     <id>http://yoursite.com/2020/08/19/python/python_dataframe/</id>
     <published>2020-08-19T07:37:01.000Z</published>
-    <updated>2020-10-20T11:10:09.550Z</updated>
+    <updated>2020-12-12T06:53:45.817Z</updated>
     
     <content type="html"><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ import pandas as pd</span><br><span class="line">$ import numpy as np</span><br></pre></td></tr></table></figure><h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df = pd.read_csv(r<span class="string">"Dmawsoni_genemodel_v1.gff"</span>, header=None, sep=<span class="string">'\t'</span>)</span><br></pre></td></tr></table></figure><h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df=df.sort_index(axis = 0,ascending = True,by = [0,3])</span><br></pre></td></tr></table></figure><h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df=df.reset_index(drop=True)</span><br></pre></td></tr></table></figure><h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df.to_csv(<span class="string">"dm_sort.gff"</span>, sep=<span class="string">'\t'</span>,index=False, header=None)</span><br></pre></td></tr></table></figure><h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df.loc[i][j]</span><br></pre></td></tr></table></figure><h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df.loc[i,j]</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -140,59 +91,6 @@
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CDS与ORF的区别</title>
-    <link href="http://yoursite.com/2020/08/15/backup/Bioinformatics001/"/>
-    <id>http://yoursite.com/2020/08/15/backup/Bioinformatics001/</id>
-    <published>2020-08-15T05:33:01.000Z</published>
-    <updated>2020-10-20T06:46:19.002Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="ORF"><a href="#ORF" class="headerlink" title="ORF"></a>ORF</h2><p>ORF（开放读码框）是从一个起始密码子开始到一个终止密码子结束的一段序列；不是所有读码框都能被表达出蛋白产物。</p><h2 id="CDS"><a href="#CDS" class="headerlink" title="CDS"></a>CDS</h2><p>CDS，是编码一段蛋白产物的序列。<br>CDS必定是一个ORF。但也可能包括很多ORF。反之，每个ORF不一定都是CDS。 </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;ORF&quot;&gt;&lt;a href=&quot;#ORF&quot; class=&quot;headerlink&quot; title=&quot;ORF&quot;&gt;&lt;/a&gt;ORF&lt;/h2&gt;&lt;p&gt;ORF（开放读码框）是从一个起始密码子开始到一个终止密码子结束的一段序列；不是所有读码框都能被表达出蛋白产物。&lt;/p&gt;
-&lt;h2 id
-      
-    
-    </summary>
-    
-    
-      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="生信" scheme="http://yoursite.com/tags/%E7%94%9F%E4%BF%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hadoop伪分布式安装</title>
-    <link href="http://yoursite.com/2020/06/30/backup/Hadoop_install/"/>
-    <id>http://yoursite.com/2020/06/30/backup/Hadoop_install/</id>
-    <published>2020-06-30T04:21:01.000Z</published>
-    <updated>2020-07-24T16:13:41.632Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoop安装在最少两台计算机的集群中。</p><h2 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h2><h2 id="安装lubuntu"><a href="#安装lubuntu" class="headerlink" title="安装lubuntu"></a>安装lubuntu</h2><h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Hadoop支持本地模式、伪分布式模式、完全分布式模式3种安装模式。本地模式，在系统中下载Hadoop，默认情况下，它会被配置为一个独立的模式，用于运行Java程序；伪分布式模式，这是在单台机器上的分布式模拟，这种模式对开发非常有用；完全分布式模式，又叫集群安装，Hadoo
-      
-    
-    </summary>
-    
-    
-      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="hadoop" scheme="http://yoursite.com/tags/hadoop/"/>
     
   </entry>
   
