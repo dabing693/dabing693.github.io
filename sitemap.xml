@@ -4,71 +4,131 @@
   <url>
     <loc>http://yoursite.com/2020/12/12/javaweb%E5%85%A5%E9%97%A8/</loc>
     
-    <lastmod>2020-12-12T07:00:58.649Z</lastmod>
+    <lastmod>2020-12-12</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/08/19/python/python_dataframe/</loc>
     
-    <lastmod>2020-12-12T06:53:45.817Z</lastmod>
+    <lastmod>2020-12-12</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/10/07/Hexo_posts/</loc>
     
-    <lastmod>2020-12-12T06:51:49.615Z</lastmod>
+    <lastmod>2020-12-12</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
-    <lastmod>2020-07-25T05:34:39.457Z</lastmod>
+    <lastmod>2020-07-25</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/05/31/Git_commands/</loc>
     
-    <lastmod>2020-07-25T03:48:47.269Z</lastmod>
+    <lastmod>2020-07-25</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/link/index.html</loc>
     
-    <lastmod>2020-07-24T15:44:20.585Z</lastmod>
+    <lastmod>2020-07-24</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/index.html</loc>
     
-    <lastmod>2020-07-24T15:41:39.516Z</lastmod>
+    <lastmod>2020-07-24</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/index.html</loc>
     
-    <lastmod>2020-07-24T15:39:34.504Z</lastmod>
+    <lastmod>2020-07-24</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/photos/data.json</loc>
     
-    <lastmod>2020-05-31T14:05:43.770Z</lastmod>
+    <lastmod>2020-05-31</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/photos/index.html</loc>
     
-    <lastmod>2018-11-27T13:11:37.000Z</lastmod>
+    <lastmod>2018-11-27</lastmod>
     
+  </url>
+  
+
+  <url>
+    <loc>http://yoursite.com/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://yoursite.com/tags/git/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/hexo/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/tomcat/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/python/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>http://yoursite.com/categories/%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/javaweb/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
   </url>
   
 </urlset>
