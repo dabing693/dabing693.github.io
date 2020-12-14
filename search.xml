@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>javaweb教程</title>
+    <url>/2020/12/12/javaweb/</url>
+    <content><![CDATA[<h1 id="1-HTTP协议"><a href="#1-HTTP协议" class="headerlink" title="1 HTTP协议"></a>1 HTTP协议</h1><p>Http协议，即超文本传输协议，是用于从服务器到浏览器的传输协议。Http是一个基于tcp/ip通信协议来传输数据（html文件、图片、查询结果等）的协议，是应用层的协议，http协议是对tcp协议的包装，其底层是tcp。</p>
+<p>OSI模型与tcp/ip模型</p>
+<p><img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gll3sof0qjj207n05pwf8.jpg" alt="img"> </p>
+<p><img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gll3twl210j20cp02sgm1.jpg" alt="img"> </p>
+<h2 id="1-1-http工作原理"><a href="#1-1-http工作原理" class="headerlink" title="1.1 http工作原理"></a>1.1 http工作原理</h2><ul>
+<li>http协议工作于客户端（浏览器，httpclient）</li>
+<li>浏览器作为http客户端通过url向http服务端即web服务器发布所有请求</li>
+<li>Web服务器有：apache，nginx，tomcat等</li>
+<li>Web服务器根据接收到的请求后，向客户端发送响应信息</li>
+<li>服务器是基于http协议开发出来的，其底层通信用的是tcp</li>
+</ul>
+<h2 id="1-2-http协议特点"><a href="#1-2-http协议特点" class="headerlink" title="1.2 http协议特点"></a>1.2 http协议特点</h2><p>（1）无连接</p>
+<p>无连接的含义是限制限制每次只处理一次请求，服务器处理完浏览器的请求，并收到客户的应答后，即断开连接。使用这种方式可以节约传输时间。</p>
+<p>（2）无状态</p>
+<p>无状态是指协议对于事务处理没有记忆能力。这意味这后续处理需要前面的信息，则必须重传。（利用会话技术去解决这一问题）。</p>
+<h2 id="1-3-UDP协议"><a href="#1-3-UDP协议" class="headerlink" title="1.3 UDP协议"></a>1.3 UDP协议</h2><p>UDP是无连接通信协议，即在传输数据时，数据的发送端和接受端不建立逻辑连接。发送端不会确认接收端是否存在。收到数据时，接受端也不会向发送端反馈是否收到数据。</p>
+<h2 id="1-4-TCP协议"><a href="#1-4-TCP协议" class="headerlink" title="1.4 TCP协议"></a>1.4 TCP协议</h2><p>​    Tcp协议是面向连接的通信协议，即在传输数据之前，在发送端和接受端建立逻辑连接，然后在传输数据，可以提供无差错可靠的数据传输。</p>
+<p>​    在TCP协议中，在发送数据的准备阶段，客户端与服务器之间的三次交互，称为“==三次握手==”，以保证连接的可靠。</p>
+<ol>
+<li>客户端向服务器端发出连接请求，等待服务器确认。</li>
+<li>服务器端向客户端回送一个响应，通知客户端收到了连接请求。</li>
+<li>客户端再次向服务端发送确认信息，确认连接。</li>
+</ol>
+<h2 id="1-5-7788"><a href="#1-5-7788" class="headerlink" title="1.5 7788"></a>1.5 7788</h2><p>（1）网络编程三要素：协议、IP地址、端口号</p>
+<p>​    IP地址可以唯一标识网络中的设备，端口号可以唯一标识设备中的进程（应用程序）</p>
+<p>（2）URL和URI的区别</p>
+<p>​    URL：统一资源定位符，uniform resource locator</p>
+<p>​    <a href="http://28.89.78.189:8080/jspproject/index.jsp?data=as_data" target="_blank" rel="noopener">http://28.89.78.189:8080/jspproject/index.jsp?data=as_data</a></p>
+<p>​    URI：http使用统一资源标识符（uri，uniform resource identifiers）来传输数据和建立连接。</p>
+<p>​    /jspproject/index.jsp</p>
+<p>（3）java工程</p>
+<ul>
+<li><p>都是java普通工程</p>
+<ul>
+<li>都有一个main方法</li>
+</ul>
+</li>
+<li><p>javaweb工程</p>
+<ul>
+<li>main方法运行以后不会停止</li>
+<li>java工程没有main方法</li>
+<li>javaweb工程的main方法是在web容器（应用服务器Tomcat中）</li>
+</ul>
+</li>
+</ul>
+<p>（4） idea将javaweb工程打包成wer包</p>
+<p>Javaweb发布的两种方式：文件夹的形式和打包成War包</p>
+<h1 id="2-Servlet"><a href="#2-Servlet" class="headerlink" title="2 Servlet"></a>2 Servlet</h1><h2 id="2-1-Servlet容器和servlet"><a href="#2-1-Servlet容器和servlet" class="headerlink" title="2.1 Servlet容器和servlet"></a>2.1 Servlet容器和servlet</h2><p>Servlet容器，也称JavaWeb容器，或者Servlet/JSP容器，是为javaweb应用提供运行时环境，管理servlet和jsp的生命周期，以及管理它们的共享资源。目前流行的Servlet容器包括：Tomcat，Jetty，Weblogic，Jboss等。</p>
+<p>Servlet：特别的java类</p>
+<h2 id="2-2-编写servlet类"><a href="#2-2-编写servlet类" class="headerlink" title="2.2 编写servlet类"></a>2.2 编写servlet类</h2><ol>
+<li>继承HttpServlet类</li>
+<li>将servlet注册到tomcat服务器</li>
+</ol>
+<ul>
+<li>通过url访问的请求，都是get请求</li>
+<li>HttpServletRequest 接受客户端的请求的数据</li>
+<li>HttpServletResponse 响应客户端的请求（向客户端响应内容）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class HelloServlet extends HttpServlet&#123;</span><br><span class="line">    @Override</span><br><span class="line">    protected void doGet(HtteServletRequest req,HttpServletResponse resp) throws ServletException,IOException&#123;</span><br><span class="line">    System.out.println(req.getParameter(&quot;name&quot;));</span><br><span class="line">    resp.getWriter().println(req.getParameter(&quot;name&quot;));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-Servlet的工作机制"><a href="#2-3-Servlet的工作机制" class="headerlink" title="2.3 Servlet的工作机制"></a>2.3 Servlet的工作机制</h2><p>（1）Servlet的初始化和销毁</p>
+<p>首次访问url地址，把类加载到虚拟机内存中，类加载完成后，又构造出对象。服务器检查servlet是否为第一次被请求。如果是第一次被请求，则：</p>
+<ol>
+<li>加载servlet类，加载HelloServlet.class到内存</li>
+<li>实例化servlet类，调用HelloServlet的构造方法创建对象</li>
+<li>调用init当法传递ServletConfig对象</li>
+<li>调用service方法传递请求和响应对象</li>
+</ol>
+<p>如果不是第一次被请求，则：调用service方法传递请求和响应对象 。</p>
+<p>（2）web容器处理servlet请求</p>
+<ol>
+<li>将请求与web.xml文件中的servlet进行映射</li>
+<li>为请求创建请求和响应对象</li>
+<li>调用线程上的service方法</li>
+<li>公共service方法内部调用受保护的service方法</li>
+<li>受保护的service方法根据请求的类型调用doGet或者doGet方法</li>
+<li>doGet或者doPost方法生成响应，并将其传递给客户端</li>
+<li>发送响应后，web容器将删除请求和响应对象</li>
+</ol>
+<p>（3）Servlet的生命周期</p>
+<p>Web容器维护servlet的生命周期</p>
+<p>Servlet的生命周期分为以下几步：</p>
+<ol>
+<li>加载servlet类</li>
+<li>创建servlet类实例</li>
+<li>调用servlet类的init方法</li>
+<li>调用servlet类的service方法</li>
+<li>调用servlet类的destory方法（tomcat重启或停机的时候会调用）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>javaweb</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Git常用命令</title>
     <url>/2020/05/31/Git_commands/</url>
     <content><![CDATA[<p>Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。<br>对于Git仓库来说，每个人都有一个独立完整的仓库，所谓的远程仓库或是服务器仓库其实也是一个仓库，只不过这台主机24小时运行，它是一个稳定的仓库，供他人克隆、推送，也从服务器仓库中拉取别人的提交。</p>
@@ -42,37 +139,6 @@
       <tags>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>javaweb教程</title>
-    <url>/2020/12/12/javaweb/</url>
-    <content><![CDATA[<h1 id="1-HTTP协议"><a href="#1-HTTP协议" class="headerlink" title="1 HTTP协议"></a>1 HTTP协议</h1><p>Http协议，即超文本传输协议，是用于从服务器到浏览器的传输协议。Http是一个基于tcp/ip通信协议来传输数据（html文件、图片、查询结果等）的协议，是应用层的协议，http协议是对tcp协议的包装，其底层是tcp。</p>
-<p>OSI模型与tcp/ip模型</p>
-<p><img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gll3sof0qjj207n05pwf8.jpg" alt="img"> </p>
-<p><img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1gll3twl210j20cp02sgm1.jpg" alt="img"> </p>
-<h2 id="1-1-http工作原理"><a href="#1-1-http工作原理" class="headerlink" title="1.1 http工作原理"></a>1.1 http工作原理</h2><ul>
-<li>http协议工作于客户端（浏览器，httpclient）</li>
-<li>浏览器作为http客户端通过url向http服务端即web服务器发布所有请求</li>
-<li>Web服务器有：apache，nginx，tomcat等</li>
-<li>Web服务器根据接收到的请求后，向客户端发送响应信息</li>
-<li>服务器是基于http协议开发出来的，其底层通信用的是tcp</li>
-</ul>
-<h2 id="1-2-http协议特点"><a href="#1-2-http协议特点" class="headerlink" title="1.2 http协议特点"></a>1.2 http协议特点</h2><p>（1）无连接</p>
-<p>无连接的含义是限制限制每次只处理一次请求，服务器处理完浏览器的请求，并收到客户的应答后，即断开连接。使用这种方式可以节约传输时间。</p>
-<p>（2）无状态</p>
-<p>无状态是指协议对于事务处理没有记忆能力。这意味这后续处理需要前面的信息，则必须重传。（利用会话技术去解决这一问题）。</p>
-<h2 id="1-3-UDP协议"><a href="#1-3-UDP协议" class="headerlink" title="1.3 UDP协议"></a>1.3 UDP协议</h2><p>UDP是无连接通信协议，即在传输数据时，数据的发送端和接受端不建立逻辑连接。发送端不会确认接收端是否存在。收到数据时，接受端也不会向发送端反馈是否收到数据。</p>
-<h2 id="1-4-TCP协议"><a href="#1-4-TCP协议" class="headerlink" title="1.4 TCP协议"></a>1.4 TCP协议</h2><p>​    Tcp协议是面向连接的通信协议，即在传输数据之前，在发送端和接受端建立逻辑连接，然后在传输数据，可以提供无差错可靠的数据传输。</p>
-<p>​    在TCP协议中，在发送数据的准备阶段，客户端与服务器之间的三次交互，称为“==三次握手==”，以保证连接的可靠。</p>
-<ol>
-<li>客户端向服务器端发出连接请求，等待服务器确认。</li>
-<li>服务器端向客户端回送一个响应，通知客户端收到了连接请求。</li>
-<li>客户端再次向服务端发送确认信息，确认连接。</li>
-</ol>
-<h2 id="1-5-网络编程三要素"><a href="#1-5-网络编程三要素" class="headerlink" title="1.5 网络编程三要素"></a>1.5 网络编程三要素</h2>]]></content>
-      <categories>
-        <category>javaweb</category>
-      </categories>
   </entry>
   <entry>
     <title>python dataframe常用函数</title>
