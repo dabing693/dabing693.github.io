@@ -20,6 +20,30 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo发帖</title>
+    <url>/2020/10/07/Hexo_posts/</url>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p>
+<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p>
+<h3 id="让服务器运行"><a href="#让服务器运行" class="headerlink" title="让服务器运行"></a>让服务器运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server 或者 hexo s</span><br></pre></td></tr></table></figure>
+<p>之后你可以通过浏览器地址输入localhost:4000在本地查看博客信息。</p>
+<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Hexo服务器</a></p>
+<h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate 或者 hexo g</span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Hexo静态页面</a></p>
+<h3 id="部署到远端网页"><a href="#部署到远端网页" class="headerlink" title="部署到远端网页"></a>部署到远端网页</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy 或者 hexo d</span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>
+]]></content>
+      <categories>
+        <category>命令大全</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>javaweb教程</title>
     <url>/2020/12/12/javaweb/</url>
     <content><![CDATA[<h1 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h1><p>Http协议，即超文本传输协议，是用于从服务器到浏览器的传输协议。Http是一个基于tcp/ip通信协议来传输数据（html文件、图片、查询结果等）的协议，是应用层的协议，http协议是对tcp协议的包装，其底层是tcp。</p>
@@ -229,34 +253,146 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//@Getter</span></span><br><span class="line"><span class="comment">//@Setter</span></span><br><span class="line"><span class="comment">//@ToString</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="keyword">private</span> String passwd;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h1 id="jsp介绍"><a href="#jsp介绍" class="headerlink" title="jsp介绍"></a>jsp介绍</h1><p>（1）</p>
+<p>动态网页技术  Jsp/asp/asp.net php –》html –》浏览器解析并展示</p>
+<p>编程阶段：html，css，javascript，相关后台脚本 –》转化成静态html</p>
+<p>（2）jsp的执行原理</p>
+<p>index.jsp–&gt;index_jsp.java（Sevlet容器帮助我们做出来的）–&gt;编译–&gt;index_jsp.class–&gt;加载到虚拟机运行</p>
+<p>（3）jsp生命周期</p>
+<p>（4）jsp常用指令</p>
+<p>JSP中有三种类型的指令标签：</p>
+<p>&lt;%@page …%&gt; 定义页面相关属性，如脚本语言，错误页面和缓冲技术。</p>
+<p>&lt;%@include …%&gt; 在编译阶段包括文件。</p>
+<p>include指令和include的标签的区别</p>
+<p>&lt;%@include file=”2.jsp”%&gt;  include标签，先合并在编译，生成一个class</p>
+<p>&lt;jsp:include page=”2.jsp”&gt;  include指令，先各自编译，再合并内容，生成多个class</p>
+<p>ubuntu idea编译jsp后的.java和.class文件在./.cache/JetBrains/IntelliJIdea2020.1/tomcat/</p>
+<p>&lt;%@taglib …%&gt; 声明页面中使用的包含自定义操作的标签库。 </p>
+<p>（5）内置对象，request，session，application的作用域</p>
+<p>page，request，session，application的生命周期，递增</p>
+<ul>
+<li>page：对当前页面有效</li>
+<li>request：对一次请求有效，HttpServletRequest<ul>
+<li>处理客户一次请求的数据。如果要传递到下次请求，使用请求转发</li>
+<li>用户打开浏览器第一次访问系统的资源，一次会话活动开始。用户关闭浏览器，会话结束。</li>
+</ul>
+</li>
+<li>session：对一次会话有效，HttpSession<ul>
+<li>存储用户的登录信息</li>
+</ul>
+</li>
+<li>application：对一个应用有效 ServletContent<ul>
+<li>可以做网站流量统计</li>
+</ul>
+</li>
+</ul>
+<p>（6）JSTL标签</p>
+<p>（7）EL表达式</p>
+<p>JSP表达式语言（EL）使得可以轻松访问应用程序数据。</p>
+<p>JSP EL允许用来创建算术和逻辑表达式。</p>
+<p>EL隐式对象</p>
+<ul>
+<li>pageScope：page作用域</li>
+<li>requestScope：request作用域</li>
+<li>sessionScope：session作用域</li>
+<li>applicationScope：application作用域</li>
+<li>cookie：Cookie值（会话部分讲）</li>
+<li>pageContent：pageContent对象</li>
+</ul>
+<p>pageScope、requestScope、sessionScope和applicationScope变量提供对存储在每个范围级别的变量的访问。如果需要显式访问应用程序范围中的变量，则可以通过application变量applicationScope来访问。</p>
+<h1 id="会话技术–cookie工作原理"><a href="#会话技术–cookie工作原理" class="headerlink" title="会话技术–cookie工作原理"></a>会话技术–cookie工作原理</h1><p>会话跟踪是跟踪用户状态的一种技术。http协议是无状态的，需要使用会话跟踪技术来维护用户状态。</p>
+<p>（1）向浏览器写入cookie以及设置cookie有效期</p>
+<p>（2）设置cookie的demian和path</p>
+<p>cookie.setPath(String path)</p>
+<p>在访问子路径时，会包含其父路径的Cookie，而在访问父路径时，不包含子路径的Cookie。</p>
+<ul>
+<li>设置js脚本禁止访问cookie</li>
+<li>获取cookie、删除cookie</li>
+<li>httpsession介绍</li>
+<li>httpsession属性获取、设置、删除</li>
+<li>httpsession的生命周期</li>
+</ul>
+<p>（3）JSTL标签</p>
+<ul>
+<li>核心标签</li>
+<li>格式化标签</li>
+<li>函数标签</li>
+<li>导入jstl相关jar包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;javax.servlet&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jstl&lt;&#x2F;artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.2&lt;&#x2F;version&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在jsp页面导入</p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%@ taglib prefix=<span class="string">"c"</span> uri=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>（4）JSTL标签–forEach标签</p>
+<p>（5）其他标签</p>
+<p>（6）格式化标签</p>
+<p>1、在jsp中加入</p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%@ taglib prefix=<span class="string">"fmt"</span> uri=<span class="string">"http://java.sun.com/jsp/jstl/fmt"</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、日期格式化</p>
+<p>3、数字格式化</p>
+<p>（7）函数标签</p>
+<p>1、在jsp文件中加入</p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%@ taglib prefix=<span class="string">"fn"</span> uri=<span class="string">"http://java.sun.com/jsp/jstl/functions"</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="案例实战"><a href="#案例实战" class="headerlink" title="案例实战"></a>案例实战</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h2 id="跳转到登录界面"><a href="#跳转到登录界面" class="headerlink" title="跳转到登录界面"></a>跳转到登录界面</h2><ul>
+<li>客户端不能访问任何jsp</li>
+<li>隐藏jsp，放到WEB-INF下，不能通过浏览器直接访问</li>
+<li>服务器内部转发是可以访问的</li>
+<li>所有的业务请求都到，一个单独的类中完成</li>
+<li>所有请求请求到servlet</li>
+</ul>
+<h2 id="展示部门列表数据"><a href="#展示部门列表数据" class="headerlink" title="展示部门列表数据"></a>展示部门列表数据</h2><ul>
+<li>重定向之前得request.getContextPath()拿到上下文路径</li>
+<li>为了美观简单，doGet方法一并放到doPost处理</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span><span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">	doPost(request,response);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="为系统增加登录认证"><a href="#为系统增加登录认证" class="headerlink" title="为系统增加登录认证"></a>为系统增加登录认证</h2><p>主页：如果已经登录，展示主页信息，否则跳转到登录页面。</p>
+<h2 id="新增部门列表"><a href="#新增部门列表" class="headerlink" title="新增部门列表"></a>新增部门列表</h2><h2 id="修改部门"><a href="#修改部门" class="headerlink" title="修改部门"></a>修改部门</h2><h2 id="保存修改"><a href="#保存修改" class="headerlink" title="保存修改"></a>保存修改</h2><h2 id="数据结构微调—uuid"><a href="#数据结构微调—uuid" class="headerlink" title="数据结构微调—uuid"></a>数据结构微调—uuid</h2><h2 id="保存部门"><a href="#保存部门" class="headerlink" title="保存部门"></a>保存部门</h2><h2 id="删除部门"><a href="#删除部门" class="headerlink" title="删除部门"></a>删除部门</h2><p>1、删除弹窗二次提示</p>
+<h2 id="javaweb过滤器filter"><a href="#javaweb过滤器filter" class="headerlink" title="javaweb过滤器filter"></a>javaweb过滤器filter</h2><ul>
+<li><p>filter是对客户端访问资源的过滤，符合条件放行，并且可以对目标资源访问前后进行逻辑处理。</p>
+</li>
+<li><p>编写一个过滤器，只要实现filter接口就行了</p>
+</li>
+<li><p>过滤器的生命周期：</p>
+<ul>
+<li>一个过滤器在系统启动后只创建一个对象</li>
+<li>要让容器知道过滤器的存在，只需要将过滤器注册到容器中：xml配置方式和注解方式</li>
+</ul>
+</li>
+<li><p>匹配规则</p>
+<ul>
+<li>完全匹配    /servlet</li>
+<li>目录匹配    /abc/*</li>
+<li>扩展名匹配    .jsp .html</li>
+</ul>
+</li>
+</ul>
+<h2 id="统一认证权限"><a href="#统一认证权限" class="headerlink" title="统一认证权限"></a>统一认证权限</h2><p>Servlet只能配置哪些uri需要走过滤器，不能配置哪些uri不走过滤器。</p>
+<h2 id="代码优化"><a href="#代码优化" class="headerlink" title="代码优化"></a>代码优化</h2><ul>
+<li>提取公共的东西方法到一个BaseServlet类中实现</li>
+<li>约定优于配置</li>
+</ul>
+<h2 id="引入jquery类库"><a href="#引入jquery类库" class="headerlink" title="引入jquery类库"></a>引入jquery类库</h2><ul>
+<li>用户名或密码错误后，在不刷新页面的情况下把提示信息显示出来</li>
+<li>表单提交会刷新页面，ajax技术的核心，就是不刷新页面，还能向服务器请求</li>
+</ul>
+<h2 id="服务器响应客户端json数据"><a href="#服务器响应客户端json数据" class="headerlink" title="服务器响应客户端json数据"></a>服务器响应客户端json数据</h2><p>服务器响应ajax请求，响应的是数据，json/xml，text，但不能是超文本</p>
+<h2 id="异步展示部门列表数据"><a href="#异步展示部门列表数据" class="headerlink" title="异步展示部门列表数据"></a>异步展示部门列表数据</h2><ul>
+<li>同步请求：携带数据转发到jsp视图。</li>
+<li>异步请求：<ul>
+<li>先请求转发到jsp视图 /dept</li>
+<li>在jsp视图中，再向服务器发一次ajax请求 /dept?opt=list</li>
+<li>将ajax请求的数据渲染到jsp视图中</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>javaweb</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Hexo发帖</title>
-    <url>/2020/10/07/Hexo_posts/</url>
-    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p>
-<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p>
-<h3 id="让服务器运行"><a href="#让服务器运行" class="headerlink" title="让服务器运行"></a>让服务器运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server 或者 hexo s</span><br></pre></td></tr></table></figure>
-<p>之后你可以通过浏览器地址输入localhost:4000在本地查看博客信息。</p>
-<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Hexo服务器</a></p>
-<h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate 或者 hexo g</span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Hexo静态页面</a></p>
-<h3 id="部署到远端网页"><a href="#部署到远端网页" class="headerlink" title="部署到远端网页"></a>部署到远端网页</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy 或者 hexo d</span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>
-]]></content>
-      <categories>
-        <category>命令大全</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
     <title>python dataframe常用函数</title>
