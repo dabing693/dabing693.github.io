@@ -20,28 +20,280 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo发帖</title>
-    <url>/2020/10/07/Hexo_posts/</url>
-    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p>
-<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <title>Spring5教程</title>
+    <url>/2020/12/18/Spring5%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Spring5教程"><a href="#Spring5教程" class="headerlink" title="Spring5教程"></a>Spring5教程</h1><ul>
+<li>Spring概述</li>
+<li>IOC容器，容器即对象工厂（工厂模式）<ul>
+<li>IOC底层原理</li>
+<li>IOC接口（BeanFactory）</li>
+<li>IOC操作bean管理（基于xml）</li>
+<li>IOC操作bean管理（基于注解）</li>
+</ul>
+</li>
+<li>Aop</li>
+<li>JdbcTemplate</li>
+<li>事务管理</li>
+<li>Spring5新特性</li>
+</ul>
+<h2 id="Spring框架"><a href="#Spring框架" class="headerlink" title="Spring框架"></a>Spring框架</h2><ol>
+<li>Spring是轻量级的开源java框架</li>
+<li>Spring可以解决企业应用开发的复杂性</li>
+<li>Spring有两个核心部分：IOC和AOP<ul>
+<li>IOC:控制反转，把创建对象过程交给Spring进行管理</li>
+<li>AOP:面向切面，不修改源代码进行功能增强</li>
+</ul>
+</li>
+<li>Spring特点</li>
+</ol>
+<p>（1）方便解藕，简化开发</p>
+<p>（2）Aop编程支持</p>
+<p>（3）方便程序测试</p>
+<p>（4）方便和其他框架进行整合</p>
+<p>（5）方便进行事务操作</p>
+<p>（6）降低API开发难度</p>
+<p>一句话概括：</p>
+<p><strong>Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器（框架）。</strong></p>
+<p><img src= "/img/loading.gif" data-src="http://ww1.sinaimg.cn/large/ad3c4311gy1glrz6pdhyoj20kd0f0gnv.jpg" alt="spring framework runtime"></p>
+<h2 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h2><ol>
+<li>下载Spring5 ，<a href="https://repo.spring.io/release/org/springframework/spring/" target="_blank" rel="noopener">下载地址</a></li>
+<li>Idea创建普通java工程</li>
+<li>导入spring5相关jar包</li>
+<li>创建一个普通类，在这个类创建一个普通方法</li>
+<li>使用xml创建spring配置文件，在配置文件中配置要创建的对象</li>
+<li>进行测试代码编写</li>
+</ol>
+<h2 id="IOC（概念和原理）"><a href="#IOC（概念和原理）" class="headerlink" title="IOC（概念和原理）"></a>IOC（概念和原理）</h2><p>1、什么是IOC</p>
+<p>(1) 控制反转，把对象创建和对象之间的调用过程，交给spring进行管理</p>
+<p>(2) 使用IOC的目的：为了降低耦合度</p>
+<p>2、IOC底层原理</p>
+<p>xml解析–&gt;工厂模式–&gt;反射（得到class文件）</p>
+<p>3、IOC底层原理（图）</p>
+<p><img src= "/img/loading.gif" data-src="https://images2017.cnblogs.com/blog/1220001/201709/1220001-20170905175004757-1285779321.png" alt="IOC底层原理"> </p>
+<p>4、IOC(接口)</p>
+<ul>
+<li>IOC思想基于IOC容器完成，IOC容器底层就是对象工厂。</li>
+<li>Spring提供IOC容器两种实现方式：（两个接口）</li>
+</ul>
+<p>（1）BeanFactory：IOC容器基本实现，是Spring内部的使用接口，不建议开发人员使用。</p>
+<p>加载配置文件的时候不创建对象，在获取（使用）对象时才创建对象。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">BeanFactory context=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"bean1.xml"</span>);</span><br></pre></td></tr></table></figure>
 
-<p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p>
-<h3 id="让服务器运行"><a href="#让服务器运行" class="headerlink" title="让服务器运行"></a>让服务器运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server 或者 hexo s</span><br></pre></td></tr></table></figure>
-<p>之后你可以通过浏览器地址输入localhost:4000在本地查看博客信息。</p>
-<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Hexo服务器</a></p>
-<h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate 或者 hexo g</span><br></pre></td></tr></table></figure>
+<p>（2）ApplicationContext：BeanFactory的子接口，提供更多更强大的功能，一般由开发人员进行使用。</p>
+<p>加载配置文件的时候就把对象创建。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ApplicationContext context=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"bean1.xml"</span>);</span><br></pre></td></tr></table></figure>
 
-<p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Hexo静态页面</a></p>
-<h3 id="部署到远端网页"><a href="#部署到远端网页" class="headerlink" title="部署到远端网页"></a>部署到远端网页</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy 或者 hexo d</span><br></pre></td></tr></table></figure>
+<p>5 、ApplicationContext实现类接口</p>
+<p>==Ctrl+h查看类相关信息== </p>
+<ul>
+<li>FileSystemXmlApplicationContext：文件系统路径</li>
+<li>ClassPathXmlApplicationContext：相对于src的类路径</li>
+</ul>
+<h2 id="IOC操作"><a href="#IOC操作" class="headerlink" title="IOC操作"></a>IOC操作</h2><h3 id="Bean管理（概念）"><a href="#Bean管理（概念）" class="headerlink" title="Bean管理（概念）"></a>Bean管理（概念）</h3><p>1、什么是Bean管理</p>
+<p>Bean管理指的是两个操作</p>
+<p>（1）Spring创建对象</p>
+<p>（2）Spring注入属性</p>
+<p>2、Bean管理操作方式有两种：</p>
+<p>（1）基于xml配置文件方式实现</p>
+<p>（2）基于注解方式实现</p>
+<h3 id="Bean管理（基于xml方式）"><a href="#Bean管理（基于xml方式）" class="headerlink" title="Bean管理（基于xml方式）"></a>Bean管理（基于xml方式）</h3><p>1、基于xml创建对象</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--配置User对象创建--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"User"</span> <span class="attr">class</span>=<span class="string">"com.atguigu.spring.User"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>
+<p>（1）使用bean标签，标签里面添加属性，就可以实现创建对象</p>
+<p>（2）Bean标签常用属性：</p>
+<ul>
+<li>id：唯一标识</li>
+<li>class：类全路径（包类路径）</li>
+<li>name：早期spring的属性，不常用</li>
+</ul>
+<p>（3）创建对象的时候，默认执行无参数构造方法，完成对象创建。（因此类只有有参构造方法就会报错）</p>
+<p>2、基于xml注入属性</p>
+<p>（1）DI(Dependency injection)：依赖注入，就是注入属性</p>
+<p>第一种注入方式：使用set方法注入</p>
+<p>（1）创建类，定义属性和对应的set方法</p>
+<p>（2）在Spring配置文件中配置类创建，配置属性注入</p>
+<p>第二种注入方式：通过有参构造注入</p>
+<p>（1）创建类，定义属性和对应的有参构造方法</p>
+<p>（2）在Spring配置文件中配置类创建，配置属性注入</p>
+<p>3、p名称空间注入，可以简化基于xml配置方式</p>
+<p>（1）在配置文件中添加p名称空间</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">xmlns:p="http://www.springframework.org/schema/p"</span><br></pre></td></tr></table></figure>
+
+<p>（2）在bean标签中进行属性注入</p>
+<h3 id="bean管理（xml注入其他类型属性）"><a href="#bean管理（xml注入其他类型属性）" class="headerlink" title="bean管理（xml注入其他类型属性）"></a>bean管理（xml注入其他类型属性）</h3><p>1、字面量</p>
+<p>（1) null值</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"birthday"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--属性注入空值--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">null</span>&gt;</span><span class="tag">&lt;/<span class="name">null</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>（2) 属性值包含特殊符号–转义或者CDATA</p>
+<p>2、注入属性–外部bean</p>
+<p>（1）创建Service类和Dao类</p>
+<p>（2）在Service类中调用Dao类的方法</p>
+<p>（3）在spring配置文件中进行配置</p>
+<p>3、注入属性–内部bean</p>
+<p>（1）一对多的关系：部门和员工，一个部门有多个员工，一个员工属于一个部门</p>
+<p>（2）在实体类中表示一对多的关系</p>
+<p>（3）在spring配置文件中进行相关配置</p>
+<p>4、注入属性–级联赋值</p>
+<p>（1）第一种写法</p>
+<p>（2）第二种写法（得生成相应对象的get方法）</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--级联赋值 第二种写法--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"emp_jilian2"</span> <span class="attr">class</span>=<span class="string">"com.atguigu.spring5.bean.Emp"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"empName"</span> <span class="attr">value</span>=<span class="string">"李思睿"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"gender"</span> <span class="attr">value</span>=<span class="string">"女"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"deptOf"</span> <span class="attr">value</span>=<span class="string">"dept"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span><span class="comment">&lt;!--不能少--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"deptOf.deptName"</span> <span class="attr">value</span>=<span class="string">"急诊部"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"dept"</span> <span class="attr">class</span>=<span class="string">"com.atguigu.spring5.bean.Dept"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="bean管理（xml注入集合属性）"><a href="#bean管理（xml注入集合属性）" class="headerlink" title="bean管理（xml注入集合属性）"></a>bean管理（xml注入集合属性）</h3><ol>
+<li>注入数组类型属性</li>
+<li>注入List集合类型属性</li>
+<li>注入map集合类型属性</li>
+<li>注入set集合类型属性<ul>
+<li>创建集合类型属性，生成对应的set方法</li>
+<li>在spring配置文件中进行配置</li>
+</ul>
+</li>
+<li>在集合里面设置集合对象的值</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"courseList"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ref</span> <span class="attr">bean</span>=<span class="string">"course1"</span>&gt;</span><span class="tag">&lt;/<span class="name">ref</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ref</span> <span class="attr">bean</span>=<span class="string">"course1"</span>&gt;</span><span class="tag">&lt;/<span class="name">ref</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>把集合注入的部分提取出来</li>
+</ol>
+<p>（1）在spring配置文件中引入名称空间util</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span>     			<span class="attr">xmlns:util</span>=<span class="string">"http://www.springframework.org/schema/util"</span></span></span><br><span class="line"><span class="tag"><span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）利用util标签完成list注入提取</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--1 使用util命名空间配置一个List集合 --&gt;</span>     </span><br><span class="line"><span class="tag">&lt;<span class="name">util:list</span> <span class="attr">id</span>=<span class="string">"book"</span> <span class="attr">value-type</span>=<span class="string">"java.lang.String"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>java入门<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>javaweb教程<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>spring5教程<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">util:list</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--2 对提取的list集合进行注入--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"book"</span> <span class="attr">class</span>=<span class="string">"com.atguigu.spring5.colletciontype.Book"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"list"</span> <span class="attr">ref</span>=<span class="string">"booklist"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Bean管理（FactoryBean）"><a href="#Bean管理（FactoryBean）" class="headerlink" title="Bean管理（FactoryBean）"></a>Bean管理（FactoryBean）</h3><ol>
+<li><p>spring中有两种bean，普通bean（自己创建的），工厂bean（Factorybean）</p>
+</li>
+<li><p>普通bean：在spring配置文件中定义的bean类型就是返回的类型。</p>
+</li>
+<li><p>工厂bean：在spring配置文件中定义的bean类型可以和返回的类型不一致，是spring中内置的一种类型。</p>
+<ul>
+<li><p>创建类，让这个类作为工厂bean，即实现Factory接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BeanTest</span> <span class="keyword">implements</span> <span class="title">FactoryBean</span>&lt;<span class="title">Course</span>&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实现接口里面的方法，在方法中定义返回的bean类型。 </p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Bean管理（bean的作用域）"><a href="#Bean管理（bean的作用域）" class="headerlink" title="Bean管理（bean的作用域）"></a>Bean管理（bean的作用域）</h3><ol>
+<li>在spring里面，bean默认是单实例对象</li>
+<li>如何设置是单实例还是多实例<ul>
+<li>利用配置文件bean标签的scope属性进行设置</li>
+<li>Scope属性值：singleton（单实例），prototype（多实例）</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"book"</span> <span class="attr">class</span>=<span class="string">"com.atguigu.spring5.colletciontype.Book"</span> <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"list"</span> <span class="attr">ref</span>=<span class="string">"booklist"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>singleton和prototype区别<ul>
+<li>scope=”singleton”时，加载配置文件的时候就创建单实例对象</li>
+<li>scope=”prototype”时，不是加载配置文件的时候就创建对象，在调用getBean方法的时候创建一个多实例对象</li>
+</ul>
+</li>
+</ol>
+<p>scope还有两个值：request和session</p>
+<p>request是获取信息，通过用户提交的表单，查询字符串，cookie等获得信息</p>
+<p>session是服务端用来保存一些数据（通常是标记状态的，当然也可以保存别的)</p>
+<h3 id="Bean管理（bean的生命周期）"><a href="#Bean管理（bean的生命周期）" class="headerlink" title="Bean管理（bean的生命周期）"></a>Bean管理（bean的生命周期）</h3><ol>
+<li><p>生命周期</p>
+<p>从对象创建到对象销毁的过程</p>
+</li>
+<li><p>演示bean的生命周期</p>
+<ol>
+<li>执行了无参数构造</li>
+<li>调用set方法设置属性</li>
+<li>执行初始化方法</li>
+<li>得到创建的bean实例对象</li>
+<li>执行销毁的方法</li>
+</ol>
+</li>
+<li><p>bean的后置处理器：允许在调用初始化方法前后对 Bean 进行额外的处理。bean生命周期共有7步：</p>
+<ol>
+<li>通过构造器创建bean实例（无参数构造）</li>
+<li>把bean实例传递给后置处理器的方法</li>
+<li>为bean的属性设置值和对其他bean的应用（调用set方法）</li>
+<li>把bean实例传递给后置处理器的方法（另一个）</li>
+<li>调用bean的初始化方法（需要配置初始化的方法）</li>
+<li>Bean可以使用了（对象获取到了）</li>
+<li>当容器关闭时，调用bean的销毁方法（需要进行配置销毁的方法）</li>
+</ol>
+</li>
+<li><p>演示添加后置处理器的方法</p>
+<p>创建类，实现BeanPostProcessor接口，创建后置处理器</p>
+</li>
+</ol>
+<h3 id="Bean管理（xml自动装配）"><a href="#Bean管理（xml自动装配）" class="headerlink" title="Bean管理（xml自动装配）"></a>Bean管理（xml自动装配）</h3><p>1、什么是自动装配</p>
+<p>（1）根据指定装配规则（属性名称或属性类型），spring自动将匹配的属性值进行注入</p>
+<p>2、演示自动装配过程</p>
+<p>bean标签有autowire属性，实现自动装配，autowire有两个常用值：</p>
+<p>（1）byName：根据属性名称实现自动装配。要装配的bean的id属性值必须和类属性值一样</p>
+<p>（2）byType：根据属性类型实现自动装配。每一个类型的bean标签只能存在一个</p>
+<h3 id="Bean管理（外部属性文件）"><a href="#Bean管理（外部属性文件）" class="headerlink" title="Bean管理（外部属性文件）"></a>Bean管理（外部属性文件）</h3><p>1、直接配置数据库信息</p>
+<p>（1）配置德鲁伊连接池</p>
+<p>（2）引入德鲁伊连接池依赖jar包</p>
+<p>2、引入外部属性文件配置数据库连接池</p>
+<p>（1）创建外部属性文件，properties格式文件，写上数据库信息</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">prop.driverClass</span>=<span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="meta">prop.url</span>=<span class="string">jdbc:mysql://localhost:3306/school</span></span><br><span class="line"><span class="meta">prop.userName</span>=<span class="string">root</span></span><br><span class="line"><span class="meta">prop.password</span>=<span class="string">314115</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）把外部properties文件引入到spring配置文件中来</p>
+<ol>
+<li>引入context名称空间</li>
+<li>配置context引入properties文件</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">"jdbc.properties"</span>&gt;</span><span class="tag">&lt;/<span class="name">context:property-placeholder</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSource"</span> <span class="attr">class</span>=<span class="string">"com.alibaba.druid.pool.DruidDataSource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClassName"</span> <span class="attr">value</span>=<span class="string">"$&#123;prop.driverClass&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"$&#123;prop.url&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"$&#123;prop.userName&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;prop.password&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Bean管理（基于注解方式）"><a href="#Bean管理（基于注解方式）" class="headerlink" title="Bean管理（基于注解方式）"></a>Bean管理（基于注解方式）</h3><p>1、什么是注解</p>
+<ul>
+<li>注解代码是特殊标记格式：@注解名称(属性名称1=属性值1,属性名称2=属性值2……)</li>
+<li>注解可以作用在方法、类、属性上面</li>
+<li>使用注解目的：简化xml配置</li>
+</ul>
+<p>2、spring针对bean管理中创建对象提供的注解</p>
+<ul>
+<li>@Component：普通注解</li>
+<li>@Service：业务逻辑层，service层</li>
+<li>@Controller：web层</li>
+<li>@Repository：dao层</li>
+</ul>
+<p>上面四个注解功能是一样的，都可以用来创建bean实例</p>
+<p>3、基于注解方式实现对象创建</p>
+<p>（1）引入依赖 spring-aop</p>
+<p>（2）开启组件扫描</p>
+<p>引入context名称空间，开启组件扫描</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--开启组件扫描，若需要扫描多个包，写法：每个包之间用逗号隔开，写包的上层目录--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context</span> <span class="attr">component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.atguigu.spring"</span>&gt;</span><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>（3）创建类，在类上面添加创建对象注解</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在注解里面value值可以不写</span></span><br><span class="line"><span class="comment">//默认值是类名称首字母小写</span></span><br><span class="line"><span class="meta">@Component</span>(value=<span class="string">"userService"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4、开启组件扫描中的一些细节问题</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--示例1 use-default-filters="false",表示不使用默认filters，自己配置filters--&gt;</span> </span><br><span class="line"><span class="comment">&lt;!--context:include-filter，设置扫描哪些内容--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.atguigu.spring5"</span> <span class="attr">use-default-filters</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Component"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--示例2 context:exclude-filter,设置哪些内容不进行扫描--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.atguigu.spring5"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">context:exclude-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Controller"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> 5、基于注解方式实现属性注入</p>
+<p>（1）@AutoWired：根据属性类型进行自动注入</p>
+<p>第一步 创建service和dao对象，并且添加注解</p>
+<p>第二步 service注入dao对象，在service类中添加dao类型属性，在属性上面进行注解</p>
+<p>（2）@Qualifier：根据属性名称进行自动注入</p>
+<p>需要和@AutoWired一起进行使用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//注解属性不需要加set方法</span></span><br><span class="line"><span class="comment">//添加注入属性注解</span></span><br><span class="line"><span class="meta">@Autowired</span>  <span class="comment">//根据类型进行注入</span></span><br><span class="line"><span class="meta">@Qualifier</span>(value = <span class="string">"userDao2"</span>) <span class="comment">//如果Dao接口有多个实现类，无法确定注入哪一个</span></span><br><span class="line"><span class="keyword">private</span> UserDao userDao;</span><br></pre></td></tr></table></figure>
+
+<p>（3）@resource：可以根据类型进行注入，也可以根据名称进行注入</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//@Resource  //根据类型注入</span></span><br><span class="line"><span class="comment">//Resource是javax即java扩展包中的注解，所以官方建议用AutoWired和Qualifier</span></span><br><span class="line"><span class="meta">@Resource</span>(name = <span class="string">"userDao2"</span>)</span><br><span class="line"><span class="keyword">private</span> UserDao userDao;</span><br></pre></td></tr></table></figure>
+
+<p>（4）Value：注入普通类型属性</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Value</span>(value = <span class="string">"abcd"</span>)</span><br><span class="line"><span class="keyword">private</span> String name;</span><br></pre></td></tr></table></figure>
+
+<p> 6、完全注解开发</p>
+<p>（1）创建配置类，替代xml配置文件</p>
+<p>类上面加上@Configuration注解即可代表注解类，还要加ComponentScan(basePackage=“”)</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan</span>(basePackages = <span class="string">"com.atguigu.spring5"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringConfig</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（2）编写测试类（和之前不一样）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//加载配置类</span></span><br><span class="line">ApplicationContext context=<span class="keyword">new</span> AnnotationConfigApplicationContext(SpringConfig<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">UserService us=context.getBean(<span class="string">"userService"</span>, UserService<span class="class">.<span class="keyword">class</span>)</span>;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
-      <categories>
-        <category>命令大全</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
     <title>Mybatis IDEA版教程</title>
@@ -594,146 +846,28 @@ System.out.println(user==user2);</code></pre><p><strong>一级缓存就是一个
 &lt;/ehcache&gt;</code></pre>]]></content>
   </entry>
   <entry>
-    <title>SpringMVC</title>
-    <url>/2020/12/17/SpringMVC/</url>
-    <content><![CDATA[<h1 id="P2-回顾mvc架构"><a href="#P2-回顾mvc架构" class="headerlink" title="P2 回顾mvc架构"></a>P2 回顾mvc架构</h1><p>1、MVC:模型model(dao,service),视图view(jsp),控制器controller(servlet)</p>
-<p>Mvc是一种软件设计规范，是将业务、逻辑、显示分离来组织代码</p>
-<p>不是一种设计模型，是一种架构模式</p>
-<p>2、controller：取得表单数据、调用业务逻辑、转向指定的页面</p>
-<p>Model：业务逻辑、保存数据的状态</p>
-<p>View：显示视图</p>
-<h1 id="P3-回顾servlet"><a href="#P3-回顾servlet" class="headerlink" title="P3 回顾servlet"></a>P3 回顾servlet</h1><p>1、MVC框架要做哪些事情</p>
-<p>（1）将url映射到java类或java类的方法 </p>
-<p>（2）封装用户提交的数据 </p>
-<p>（3）处理请求–调用相关的业务处理–封装响应数据 </p>
-<p>（4）将响应的数据进行渲染 . jsp / html 等表示层数据 </p>
-<h1 id="P4-初识springmvc"><a href="#P4-初识springmvc" class="headerlink" title="P4 初识springmvc"></a>P4 初识springmvc</h1><p>1、Spring MVC是Spring Framework的一部分，是基于Java实现MVC的轻量级Web框架。</p>
-<p>2、<img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpstOpmaH.jpg" alt="img"></p>
-<p>3、Spring的web框架围绕DispatcherServlet设计。DispatcherServlet的作用是将请求分发到不同的处理器。</p>
-<p>4、spring MVC框架像许多其他MVC框架一样, 以请求为驱动 , 围绕一个中心Servlet分派请求及提供其他功能，DispatcherServlet是一个实际的Servlet (它继承自HttpServlet 基类)。</p>
-<p>5、Springmvc的原理图</p>
-<p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpscG6J6D.jpg" alt="img"> </p>
-<p>6、可能遇到的问题：访问出现404，排查步骤：</p>
-<p>（1）查看控制台输出，看一下是不是缺少了什么jar包。</p>
-<p>（2）如果jar包存在，显示无法输出，就在IDEA的项目发布中，添加lib依赖！</p>
-<p>（3）重启Tomcat 即可解决！</p>
-<h1 id="P5-springmvc执行原理"><a href="#P5-springmvc执行原理" class="headerlink" title="P5 springmvc执行原理"></a>P5 springmvc执行原理</h1><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsNCWyMG.jpg" alt="img"> </p>
-<p>1、图为SpringMVC的一个较完整的流程图，实线表示SpringMVC框架提供的技术，不需要开发者实现，虚线表示需要开发者实现。</p>
-<h1 id="P7-使用注解方法开发springmvc"><a href="#P7-使用注解方法开发springmvc" class="headerlink" title="P7 使用注解方法开发springmvc"></a>P7 使用注解方法开发springmvc</h1><p>1、由于Maven可能存在资源过滤的问题，我们将配置完善</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">  &lt;resources&gt;</span><br><span class="line">​    &lt;resource&gt;</span><br><span class="line">​      &lt;directory&gt;src&#x2F;main&#x2F;java&lt;&#x2F;directory&gt;</span><br><span class="line">​      &lt;includes&gt;</span><br><span class="line">​        &lt;include&gt;**&#x2F;*.properties&lt;&#x2F;include&gt;</span><br><span class="line">​        &lt;include&gt;**&#x2F;*.xml&lt;&#x2F;include&gt;</span><br><span class="line">​      &lt;&#x2F;includes&gt;</span><br><span class="line">​      &lt;filtering&gt;false&lt;&#x2F;filtering&gt;</span><br><span class="line">​    &lt;&#x2F;resource&gt;</span><br><span class="line">​    &lt;resource&gt;</span><br><span class="line">​      &lt;directory&gt;src&#x2F;main&#x2F;resources&lt;&#x2F;directory&gt;</span><br><span class="line">​      &lt;includes&gt;</span><br><span class="line">​        &lt;include&gt;**&#x2F;*.properties&lt;&#x2F;include&gt;</span><br><span class="line">​        &lt;include&gt;**&#x2F;*.xml&lt;&#x2F;include&gt;</span><br><span class="line">​      &lt;&#x2F;includes&gt;</span><br><span class="line">​      &lt;filtering&gt;false&lt;&#x2F;filtering&gt;</span><br><span class="line">​    &lt;&#x2F;resource&gt;</span><br><span class="line">  &lt;&#x2F;resources&gt;</span><br><span class="line">&lt;&#x2F;build&gt;</span><br></pre></td></tr></table></figure>
+    <title>Hexo发帖</title>
+    <url>/2020/10/07/Hexo_posts/</url>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> ，这是你的第一个帖子。你可以从 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo文档</a> 获得更多信息。当使用Hexo时你有任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">hexo求助社区</a> 寻求帮助，或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 询问我。<br>Hexo是一个基于nodejs的静态博客网站生成器，作者是来自台湾的 Tommy Chen。<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持Markdown<br>仅需一道指令即可部署到GitHub Pages和Heroku<br>已移植Octopress插件<br>高扩展性、自订性<br>兼容于Windows,Mac&amp;Linux</p>
+<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-<p>2、添加Spring MVC配置文件</p>
-<p>在resource目录下添加springmvc-servlet.xml配置文件，配置的形式与Spring容器配置基本类似，为了支持基于注解的IOC，设置了自动扫描包的功能，具体配置信息如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns&#x3D;&quot;http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;beans&quot;</span><br><span class="line">   xmlns:xsi&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema-instance&quot;</span><br><span class="line">   xmlns:context&#x3D;&quot;http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;context&quot;</span><br><span class="line">   xmlns:mvc&#x3D;&quot;http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;mvc&quot;</span><br><span class="line">   xsi:schemaLocation&#x3D;&quot;http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;beans</span><br><span class="line">​    http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;beans&#x2F;spring-beans.xsd</span><br><span class="line">​    http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;context</span><br><span class="line">​    https:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;context&#x2F;spring-context.xsd</span><br><span class="line">​    http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;mvc</span><br><span class="line">​    https:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;mvc&#x2F;spring-mvc.xsd&quot;&gt;</span><br><span class="line">  &lt;!-- 自动扫描包，让指定包下的注解生效,由IOC容器统一管理 --&gt;</span><br><span class="line">  &lt;context:component-scan base-package&#x3D;&quot;com.kuang.controller&quot;&#x2F;&gt;</span><br><span class="line">  &lt;!-- 让Spring MVC不处理静态资源 --&gt;</span><br><span class="line">  &lt;mvc:default-servlet-handler &#x2F;&gt;</span><br><span class="line">  &lt;!--</span><br><span class="line">  支持mvc注解驱动</span><br><span class="line">​    在spring中一般采用@RequestMapping注解来完成映射关系</span><br><span class="line">​    要想使@RequestMapping注解生效</span><br><span class="line">​    必须向上下文中注册DefaultAnnotationHandlerMapping</span><br><span class="line">​    和一个AnnotationMethodHandlerAdapter实例</span><br><span class="line">​    这两个实例分别在类级别和方法级别处理。</span><br><span class="line">​    而annotation-driven配置帮助我们自动完成上述两个实例的注入。</span><br><span class="line">  --&gt;</span><br><span class="line">  &lt;mvc:annotation-driven &#x2F;&gt;</span><br><span class="line">  &lt;!-- 视图解析器 --&gt;</span><br><span class="line">  &lt;bean class&#x3D;&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;</span><br><span class="line">​     id&#x3D;&quot;internalResourceViewResolver&quot;&gt;</span><br><span class="line">​    &lt;!-- 前缀 --&gt;</span><br><span class="line">​    &lt;property name&#x3D;&quot;prefix&quot; value&#x3D;&quot;&#x2F;WEB-INF&#x2F;jsp&#x2F;&quot; &#x2F;&gt;</span><br><span class="line">​    &lt;!-- 后缀 --&gt;</span><br><span class="line">​    &lt;property name&#x3D;&quot;suffix&quot; value&#x3D;&quot;.jsp&quot; &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;bean&gt;</span><br><span class="line">&lt;&#x2F;beans&gt;</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Hexo发帖</a></p>
+<h3 id="让服务器运行"><a href="#让服务器运行" class="headerlink" title="让服务器运行"></a>让服务器运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server 或者 hexo s</span><br></pre></td></tr></table></figure>
+<p>之后你可以通过浏览器地址输入localhost:4000在本地查看博客信息。</p>
+<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Hexo服务器</a></p>
+<h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate 或者 hexo g</span><br></pre></td></tr></table></figure>
 
-<p>3、小结</p>
-<p>实现步骤其实非常的简单：</p>
-<p>新建一个web项目</p>
-<p>导入相关jar包</p>
-<p>编写web.xml , 注册DispatcherServlet</p>
-<p>编写springmvc配置文件</p>
-<p>接下来就是去创建对应的控制类 , controller</p>
-<p>最后完善前端视图和controller之间的对应</p>
-<p>测试运行调试</p>
-<p>使用springMVC必须配置的三大件：处理器映射器、处理器适配器、视图解析器。通常，我们只需要手动配置视图解析器，而处理器映射器和处理器适配器只需要开启注解驱动即可，而省去了大段的xml配置。</p>
-<h1 id="P8-Controller控制器配置总结"><a href="#P8-Controller控制器配置总结" class="headerlink" title="P8 Controller控制器配置总结"></a>P8 Controller控制器配置总结</h1><p>视图解析器是必需的</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 视图解析器 --&gt;</span><br><span class="line">&lt;bean class&#x3D;&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;</span><br><span class="line">      id&#x3D;&quot;internalResourceViewResolver&quot;&gt;</span><br><span class="line">    &lt;!-- 前缀 --&gt;</span><br><span class="line">    &lt;property name&#x3D;&quot;prefix&quot; value&#x3D;&quot;&#x2F;WEB-INF&#x2F;jsp&#x2F;&quot; &#x2F;&gt;</span><br><span class="line">    &lt;!-- 后缀 --&gt;</span><br><span class="line">    &lt;property name&#x3D;&quot;suffix&quot; value&#x3D;&quot;.jsp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Hexo静态页面</a></p>
+<h3 id="部署到远端网页"><a href="#部署到远端网页" class="headerlink" title="部署到远端网页"></a>部署到远端网页</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy 或者 hexo d</span><br></pre></td></tr></table></figure>
 
-<h2 id="1、实现Controller方式"><a href="#1、实现Controller方式" class="headerlink" title="1、实现Controller方式"></a>1、实现Controller方式</h2><p>把类注入bean</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;bean name&#x3D;&quot;&#x2F;t1&quot; class&#x3D;&quot;com.kuang.controller.ControllerDemo1&quot;&gt;&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
-
-<p>实现controller接口</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class ControllerDemo1 implements Controller &#123;</span><br><span class="line">    public ModelAndView handleRequest(HttpServletRequest httpServletRequest,</span><br><span class="line">                                      HttpServletResponse httpServletResponse)</span><br><span class="line">            throws Exception &#123;</span><br><span class="line">        ModelAndView mv&#x3D;new ModelAndView();</span><br><span class="line">        mv.addObject(&quot;msg&quot;,&quot;Controller test1!&quot;);</span><br><span class="line">        mv.setViewName(&quot;test1&quot;); &#x2F;&#x2F;拼接到前后缀</span><br><span class="line">        return mv;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2、使用注解方式"><a href="#2、使用注解方式" class="headerlink" title="2、使用注解方式"></a>2、使用注解方式</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Component	组件</span><br><span class="line">@Controller	controller</span><br><span class="line">@Service	service</span><br><span class="line">@Repository	dao层</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Controller</span><br><span class="line">@RequestMapping(&quot;&#x2F;hello&quot;)</span><br><span class="line">public class HelloController &#123;</span><br><span class="line">    @RequestMapping(&quot;&#x2F;h1&quot;)</span><br><span class="line">    public String hello(Model model)&#123;</span><br><span class="line">        &#x2F;&#x2F;封装数据</span><br><span class="line">        model.addAttribute(&quot;msg&quot;,&quot;Hello,SpringMVCAnnotation!&quot;);</span><br><span class="line"></span><br><span class="line">        return &quot;hello&quot;;   &#x2F;&#x2F;会被视图解析器处理</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 自动扫描包，让指定包下的注解生效,由IOC容器统一管理 --&gt;</span><br><span class="line">&lt;context:component-scan base-package&#x3D;&quot;com.kuang.controller&quot;&#x2F;&gt;</span><br><span class="line">&lt;!-- 让Spring MVC不处理静态资源 --&gt;</span><br><span class="line">&lt;mvc:default-servlet-handler &#x2F;&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">支持mvc注解驱动</span><br><span class="line">    在spring中一般采用@RequestMapping注解来完成映射关系</span><br><span class="line">    要想使@RequestMapping注解生效</span><br><span class="line">    必须向上下文中注册DefaultAnnotationHandlerMapping</span><br><span class="line">    和一个AnnotationMethodHandlerAdapter实例</span><br><span class="line">    这两个实例分别在类级别和方法级别处理。</span><br><span class="line">    而annotation-driven配置帮助我们自动完成上述两个实例的注入。</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;mvc:annotation-driven &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<h1 id="P9-RequestMapping说明"><a href="#P9-RequestMapping说明" class="headerlink" title="P9 RequestMapping说明"></a>P9 RequestMapping说明</h1><h1 id="P10-RestFul风格讲解"><a href="#P10-RestFul风格讲解" class="headerlink" title="P10 RestFul风格讲解"></a>P10 RestFul风格讲解</h1><p>RestFul就是一个资源定位及资源操作的风格。</p>
-<p>资源：互联网所有的事物都可以被抽象为资源</p>
-<p>资源操作：使用POST、DELETE、PUT、GET，使用不同方法对资源进行操作。</p>
-<p>分别对应 添加、 删除、修改、查询。</p>
-<p>1、在新建一个类 RestFulController</p>
-<p>2、在Spring MVC中可以使用  @PathVariable 注解，让方法参数的值对应绑定到一个URI模板变量上。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class RestFulController &#123;</span><br><span class="line">    &#x2F;&#x2F;http:&#x2F;&#x2F;localhost:8080&#x2F;springmvc_04&#x2F;add?a&#x3D;1&amp;b&#x3D;2</span><br><span class="line">    @RequestMapping(&quot;&#x2F;test1&quot;)</span><br><span class="line">    public String test1(int a, int b, Model model)&#123;</span><br><span class="line">        int res&#x3D;a+b;</span><br><span class="line">        model.addAttribute(&quot;msg&quot;,&quot;结果为&quot;+res);</span><br><span class="line">        return &quot;test1&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;http:&#x2F;&#x2F;localhost:8080&#x2F;springmvc_04&#x2F;1&#x2F;2</span><br><span class="line">    @RequestMapping(&quot;&#x2F;test2&#x2F;&#123;a&#125;&#x2F;&#123;b&#125;&quot;)</span><br><span class="line">    public String test2(@PathVariable int a,@PathVariable int b, Model model)&#123;</span><br><span class="line">        int res&#x3D;a+b;</span><br><span class="line">        model.addAttribute(&quot;msg&quot;,&quot;结果为&quot;+res);</span><br><span class="line">        return &quot;test1&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>用于约束请求的类型，可以收窄请求范围。指定请求谓词的类型如GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE, TRACE等</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(value &#x3D; &quot;&#x2F;test2&#x2F;&#123;a&#125;&#x2F;&#123;b&#125;&quot;,method &#x3D; RequestMethod.GET)</span><br><span class="line">&#x2F;&#x2F;@GetMapping(&quot;&#x2F;test2&#x2F;&#123;a&#125;&#x2F;&#123;b&#125;&quot;)</span><br><span class="line">public String test2(@PathVariable String a,@PathVariable String b, Model model)&#123;</span><br><span class="line">    System.out.println(a+b);</span><br><span class="line">    model.addAttribute(&quot;msg&quot;,&quot;用户名：&quot;+a+&quot;\n密码：&quot;+b);</span><br><span class="line">    return &quot;test1&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;login&quot;)</span><br><span class="line">public String login(Model model)&#123;</span><br><span class="line">    return &quot;login&quot;;</span><br><span class="line">&#125;</span><br><span class="line">@RequestMapping(value &#x3D; &quot;&#x2F;test3&quot;,method &#x3D; RequestMethod.POST)</span><br><span class="line">public String test3(String a,String b,Model model)&#123;</span><br><span class="line">    model.addAttribute(&quot;msg&quot;,&quot;用户名：&quot;+a+&quot;\n密码：&quot;+b);</span><br><span class="line">    return &quot;test1&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Spring MVC 的 @RequestMapping 注解能够处理 HTTP 请求的方法, 比如 GET, PUT, POST, DELETE 以及 PATCH。所有的地址栏请求默认都会是 HTTP GET 类型的。方法级别的注解变体有如下几个：组合注解</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@GetMapping</span><br><span class="line">@PostMapping</span><br><span class="line">@PutMapping</span><br><span class="line">@DeleteMapping</span><br><span class="line">@PatchMapping</span><br></pre></td></tr></table></figure>
-
-<p>@GetMapping 是一个组合注解，平时使用的会比较多！</p>
-<h1 id="P11-重定向和转发"><a href="#P11-重定向和转发" class="headerlink" title="P11 重定向和转发"></a>P11 重定向和转发</h1><p>通过SpringMVC来实现转发和重定向 - 有视图解析器；重定向 , 不需要视图解析器 , 本质就是重新请求一个新地方嘛 , 所以注意路径问题。可以重定向到另外一个请求实现 。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(value &#x3D; &quot;&#x2F;m1&#x2F;t2&quot;)</span><br><span class="line">public String test2(String a,String b,HttpServletRequest request, HttpServletResponse response) throws IOException&#123;</span><br><span class="line">    System.out.println(request.getSession().getId());</span><br><span class="line">    request.setAttribute(&quot;msg&quot;,&quot;用户名：&quot;+a+&quot;密码：&quot;+b);</span><br><span class="line">    &#x2F;&#x2F;return &quot;redirect:&#x2F;index.jsp&quot;;</span><br><span class="line">    return &quot;redirect:&#x2F;login&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="P12-接受请求参数及数据回显"><a href="#P12-接受请求参数及数据回显" class="headerlink" title="P12 接受请求参数及数据回显"></a>P12 接受请求参数及数据回显</h1><h2 id="1-提交的域名称和处理方法的参数名不一致"><a href="#1-提交的域名称和处理方法的参数名不一致" class="headerlink" title="1 提交的域名称和处理方法的参数名不一致"></a>1 提交的域名称和处理方法的参数名不一致</h2><p>提交数据 : <a href="http://localhost:8080/hello?username=kuangshen。处理方法" target="_blank" rel="noopener">http://localhost:8080/hello?username=kuangshen。处理方法</a> :</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;@RequestParam(&quot;username&quot;) : username提交的域的名称 .</span><br><span class="line">@RequestMapping(&quot;&#x2F;hello&quot;)</span><br><span class="line">public String hello(@RequestParam(&quot;username&quot;) String name)&#123;</span><br><span class="line">   System.out.println(name);</span><br><span class="line">   return &quot;hello&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-提交的是一个对象"><a href="#2-提交的是一个对象" class="headerlink" title="2 提交的是一个对象"></a>2 提交的是一个对象</h2><p>要求提交的表单域和对象的属性名一致  , 参数使用对象即可</p>
-<p>2.1 实体类</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line">   private int id;</span><br><span class="line">   private String name;</span><br><span class="line">   private int age;</span><br><span class="line">   &#x2F;&#x2F;构造</span><br><span class="line">   &#x2F;&#x2F;get&#x2F;set</span><br><span class="line">   &#x2F;&#x2F;tostring()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2.2 提交数据 : <a href="http://localhost:8080/mvc04/user?name=kuangshen&amp;id=1&amp;age=15" target="_blank" rel="noopener">http://localhost:8080/mvc04/user?name=kuangshen&amp;id=1&amp;age=15</a></p>
-<p>2.3 处理方法 :</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;user&quot;)</span><br><span class="line">public String user(User user)&#123;</span><br><span class="line">   System.out.println(user);</span><br><span class="line">   return &quot;hello&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>后台输出 : User { id=1, name=’kuangshen’, age=15 }</p>
-<p>说明：如果使用对象的话，前端传递的参数名和对象名必须一致，否则就是null。</p>
-<h2 id="3-数据显示到前端"><a href="#3-数据显示到前端" class="headerlink" title="3 数据显示到前端"></a>3 数据显示到前端</h2><h3 id="3-1-第一种-通过ModelAndView"><a href="#3-1-第一种-通过ModelAndView" class="headerlink" title="3.1 第一种 : 通过ModelAndView"></a>3.1 第一种 : 通过ModelAndView</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class ControllerTest1 implements Controller &#123;</span><br><span class="line">   public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception &#123;</span><br><span class="line">       &#x2F;&#x2F;返回一个模型视图对象</span><br><span class="line">       ModelAndView mv &#x3D; new ModelAndView();</span><br><span class="line">       mv.addObject(&quot;msg&quot;,&quot;ControllerTest1&quot;);</span><br><span class="line">       mv.setViewName(&quot;test&quot;);</span><br><span class="line">       return mv;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-第二种-通过ModelMap"><a href="#3-2-第二种-通过ModelMap" class="headerlink" title="3.2 第二种 : 通过ModelMap"></a>3.2 第二种 : 通过ModelMap</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;hello&quot;)</span><br><span class="line">public String hello(@RequestParam(&quot;username&quot;) String name, ModelMap model)&#123;</span><br><span class="line">   &#x2F;&#x2F;封装要显示到视图中的数据</span><br><span class="line">   &#x2F;&#x2F;相当于req.setAttribute(&quot;name&quot;,name);</span><br><span class="line">   model.addAttribute(&quot;name&quot;,name);</span><br><span class="line">   System.out.println(name);</span><br><span class="line">   return &quot;hello&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-第三种-通过Model"><a href="#3-3-第三种-通过Model" class="headerlink" title="3.3 第三种 : 通过Model"></a>3.3 第三种 : 通过Model</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;ct2&#x2F;hello&quot;)</span><br><span class="line">public String hello(@RequestParam(&quot;username&quot;) String name, Model model)&#123;</span><br><span class="line">   &#x2F;&#x2F;封装要显示到视图中的数据</span><br><span class="line">   &#x2F;&#x2F;相当于req.setAttribute(&quot;name&quot;,name);</span><br><span class="line">   model.addAttribute(&quot;msg&quot;,name);</span><br><span class="line">   System.out.println(name);</span><br><span class="line">   return &quot;test&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="P13-乱码问题解决"><a href="#P13-乱码问题解决" class="headerlink" title="P13 乱码问题解决"></a>P13 乱码问题解决</h1><p>乱码问题通过过滤器解决 , 而SpringMVC给我们提供了一个过滤器 , 可以在web.xml中配置 。修改了xml文件需要重启服务器！</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;filter&gt;</span><br><span class="line">   &lt;filter-name&gt;encoding&lt;&#x2F;filter-name&gt;</span><br><span class="line">   &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;&#x2F;filter-class&gt;</span><br><span class="line">   &lt;init-param&gt;</span><br><span class="line">       &lt;param-name&gt;encoding&lt;&#x2F;param-name&gt;</span><br><span class="line">       &lt;param-value&gt;utf-8&lt;&#x2F;param-value&gt;</span><br><span class="line">   &lt;&#x2F;init-param&gt;</span><br><span class="line">&lt;&#x2F;filter&gt;</span><br><span class="line">&lt;!--&#x2F;*才行，&#x2F;不太行--&gt;</span><br><span class="line">&lt;filter-mapping&gt;</span><br><span class="line">   &lt;filter-name&gt;encoding&lt;&#x2F;filter-name&gt;</span><br><span class="line">   &lt;url-pattern&gt;&#x2F;*&lt;&#x2F;url-pattern&gt;</span><br><span class="line">&lt;&#x2F;filter-mapping&gt;</span><br></pre></td></tr></table></figure>
-
-<h1 id="P14-什么是json"><a href="#P14-什么是json" class="headerlink" title="P14 什么是json"></a>P14 什么是json</h1><h2 id="1-什么是json"><a href="#1-什么是json" class="headerlink" title="1 什么是json"></a>1 什么是json</h2><ul>
-<li>JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式，目前使用特别广泛。</li>
-<li>采用完全独立于编程语言的<strong>文本格式</strong>来存储和表示数据。</li>
-<li>简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。</li>
-<li>易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。</li>
-</ul>
-<p>在 JavaScript 语言中，一切都是对象。因此，任何JavaScript 支持的类型都可以通过 JSON 来表示，例如字符串、数字、对象、数组等。看看他的要求和语法格式：</p>
-<ul>
-<li>对象表示为键值对，数据由逗号分隔</li>
-<li>花括号保存对象</li>
-<li>方括号保存数组</li>
-</ul>
-<p><strong>JSON 键值对</strong>是用来保存 JavaScript 对象的一种方式，和 JavaScript 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;&quot;name&quot;: &quot;QinJiang&quot;&#125;</span><br><span class="line">&#123;&quot;age&quot;: &quot;3&quot;&#125;</span><br><span class="line">&#123;&quot;sex&quot;: &quot;男&quot;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>很多人搞不清楚 JSON 和 JavaScript 对象的关系，甚至连谁是谁都不清楚。其实，可以这么理解：</p>
-<p>JSON 是 JavaScript 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var obj &#x3D; &#123;a: &#39;Hello&#39;, b: &#39;World&#39;&#125;; &#x2F;&#x2F;这是一个对象，注意键名也是可以使用引号包裹的</span><br><span class="line">var json &#x3D; &#39;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#39;; &#x2F;&#x2F;这是一个 JSON 字符串，本质是一个字符串</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-JSON-和-JavaScript-对象互转"><a href="#2-JSON-和-JavaScript-对象互转" class="headerlink" title="2 JSON 和 JavaScript 对象互转"></a>2 JSON 和 JavaScript 对象互转</h2><p>要实现从JSON字符串转换为JavaScript 对象，使用 JSON.parse() 方法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var obj &#x3D; JSON.parse(&#39;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#39;);</span><br><span class="line">&#x2F;&#x2F;结果是 &#123;a: &#39;Hello&#39;, b: &#39;World&#39;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>要实现从JavaScript 对象转换为JSON字符串，使用 JSON.stringify() 方法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var json &#x3D; JSON.stringify(&#123;a: &#39;Hello&#39;, b: &#39;World&#39;&#125;);</span><br><span class="line">&#x2F;&#x2F;结果是 &#39;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#39;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-代码测试"><a href="#3-代码测试" class="headerlink" title="3 代码测试"></a>3 代码测试</h2><p>1、新建一个module ，springmvc-05-json ， 添加web的支持</p>
-<p>2、在web目录下新建一个 json-1.html ， 编写测试内容</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">   &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">   &lt;title&gt;JSON_秦疆&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">   &#x2F;&#x2F;编写一个js的对象</span><br><span class="line">   var user &#x3D; &#123;</span><br><span class="line">       name:&quot;秦疆&quot;,</span><br><span class="line">       age:3,</span><br><span class="line">       sex:&quot;男&quot;</span><br><span class="line">  &#125;;</span><br><span class="line">   &#x2F;&#x2F;将js对象转换成json字符串</span><br><span class="line">   var str &#x3D; JSON.stringify(user);</span><br><span class="line">   console.log(str);</span><br><span class="line">   &#x2F;&#x2F;将json字符串转换为js对象</span><br><span class="line">   var user2 &#x3D; JSON.parse(str);</span><br><span class="line">   console.log(user2.age,user2.name,user2.sex);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
-<p>在IDEA中使用浏览器打开，查看控制台输出！</p>
-<p>P15 Jackjson的使用</p>
-<h3 id="1-乱码统一解决-springmvc-servlet-xml"><a href="#1-乱码统一解决-springmvc-servlet-xml" class="headerlink" title="1 乱码统一解决 springmvc-servlet.xml"></a>1 乱码统一解决 springmvc-servlet.xml</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mvc:annotation-driven&gt;</span><br><span class="line">   &lt;mvc:message-converters register-defaults&#x3D;&quot;true&quot;&gt;</span><br><span class="line">       &lt;bean class&#x3D;&quot;org.springframework.http.converter.StringHttpMessageConverter&quot;&gt;</span><br><span class="line">           &lt;constructor-arg value&#x3D;&quot;UTF-8&quot;&#x2F;&gt;</span><br><span class="line">       &lt;&#x2F;bean&gt;</span><br><span class="line">       &lt;bean class&#x3D;&quot;org.springframework.http.converter.json.MappingJackson2HttpMessageConverter&quot;&gt;</span><br><span class="line">           &lt;property name&#x3D;&quot;objectMapper&quot;&gt;</span><br><span class="line">               &lt;bean class&#x3D;&quot;org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean&quot;&gt;</span><br><span class="line">                   &lt;property name&#x3D;&quot;failOnEmptyBeans&quot; value&#x3D;&quot;false&quot;&#x2F;&gt;</span><br><span class="line">               &lt;&#x2F;bean&gt;</span><br><span class="line">           &lt;&#x2F;property&gt;</span><br><span class="line">       &lt;&#x2F;bean&gt;</span><br><span class="line">   &lt;&#x2F;mvc:message-converters&gt;</span><br><span class="line">&lt;&#x2F;mvc:annotation-driven&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-返回json字符串统一解决"><a href="#2-返回json字符串统一解决" class="headerlink" title="2 返回json字符串统一解决"></a>2 返回json字符串统一解决</h3><p>在类上直接使用 @RestController，这样子，里面所有的方法都只会返回 json 字符串了，不用再每一个都添加@ResponseBody ！我们在前后端分离开发中，一般都使用 @RestController ，十分便捷！</p>
-<h3 id="3-自定义时间格式"><a href="#3-自定义时间格式" class="headerlink" title="3 自定义时间格式"></a>3 自定义时间格式</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;json4&quot;)</span><br><span class="line">public String json4() throws JsonProcessingException &#123;</span><br><span class="line">   ObjectMapper mapper &#x3D; new ObjectMapper();</span><br><span class="line">   &#x2F;&#x2F;不使用时间戳的方式</span><br><span class="line">   mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);</span><br><span class="line">   &#x2F;&#x2F;自定义日期格式对象</span><br><span class="line">   SimpleDateFormat sdf &#x3D; new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line">   &#x2F;&#x2F;指定日期格式</span><br><span class="line">   mapper.setDateFormat(sdf);</span><br><span class="line">   Date date &#x3D; new Date();</span><br><span class="line">   String str &#x3D; mapper.writeValueAsString(date);</span><br><span class="line">   return str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-自定义工具类"><a href="#4-自定义工具类" class="headerlink" title="4 自定义工具类"></a>4 自定义工具类</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class JsonUtil &#123;</span><br><span class="line">    public static String getJson(Object object)&#123;</span><br><span class="line">        return getJson(object,&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @SneakyThrows</span><br><span class="line">    public static String getJson(Object object, String dataFormat)&#123;</span><br><span class="line">        ObjectMapper mapper&#x3D;new ObjectMapper();</span><br><span class="line">        mapper.configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS,false);</span><br><span class="line">        SimpleDateFormat sdf&#x3D;new SimpleDateFormat(dataFormat);</span><br><span class="line">        mapper.setDateFormat(sdf);</span><br><span class="line">        try&#123;</span><br><span class="line">            return mapper.writeValueAsString(object);</span><br><span class="line">        &#125; catch (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="P15-FastJson使用"><a href="#P15-FastJson使用" class="headerlink" title="P15 FastJson使用"></a>P15 FastJson使用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println(&quot;*******Java对象 转 JSON字符串*******&quot;);</span><br><span class="line">String str1 &#x3D; JSON.toJSONString(list);</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;\n****** JSON字符串 转 Java对象*******&quot;);</span><br><span class="line">User jp_user1&#x3D;JSON.parseObject(str2,User.class);</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;\n****** Java对象 转 JSON对象 ******&quot;);</span><br><span class="line">JSONObject jsonObject1 &#x3D; (JSONObject) JSON.toJSON(user2);</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;\n****** JSON对象 转 Java对象 ******&quot;);</span><br><span class="line">User to_java_user &#x3D; JSON.toJavaObject(jsonObject1, User.class);</span><br></pre></td></tr></table></figure>]]></content>
+<p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Hexo部署</a></p>
+]]></content>
+      <categories>
+        <category>命令大全</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>javaweb教程</title>
@@ -1140,6 +1274,154 @@ System.out.println(user==user2);</code></pre><p><strong>一级缓存就是一个
       <categories>
         <category>javaweb</category>
       </categories>
+  </entry>
+  <entry>
+    <title>SpringMVC</title>
+    <url>/2020/12/17/SpringMVC/</url>
+    <content><![CDATA[<h1 id="回顾mvc架构"><a href="#回顾mvc架构" class="headerlink" title="回顾mvc架构"></a>回顾mvc架构</h1><p>1、MVC:模型model(dao,service),视图view(jsp),控制器controller(servlet)</p>
+<p>MVC是一种软件设计规范，是将业务、逻辑、显示分离来组织代码</p>
+<p>不是一种设计模型，是一种架构模式</p>
+<p>2、controller：取得表单数据、调用业务逻辑、转向指定的页面</p>
+<p>Model：业务逻辑、保存数据的状态</p>
+<p>View：显示视图</p>
+<h1 id="回顾servlet"><a href="#回顾servlet" class="headerlink" title="回顾servlet"></a>回顾servlet</h1><p>MVC框架处理流程：</p>
+<ol>
+<li><p>将url映射到java类或java类的方法 </p>
+</li>
+<li><p>封装用户提交的数据 </p>
+</li>
+<li><p>处理请求–&gt;调用相关的业务处理–&gt;封装响应数据 </p>
+</li>
+<li><p>将响应的数据进行渲染 . jsp / html 等表示层数据 </p>
+</li>
+</ol>
+<h1 id="P4-初识springmvc"><a href="#P4-初识springmvc" class="headerlink" title="P4 初识springmvc"></a>P4 初识springmvc</h1><p>1、Spring MVC是Spring Framework的一部分，是基于Java实现MVC的轻量级Web框架。</p>
+<p>2、<img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpstOpmaH.jpg" alt="img"></p>
+<p>3、Spring的web框架围绕DispatcherServlet设计。DispatcherServlet的作用是将请求分发到不同的处理器。</p>
+<p>4、spring MVC框架像许多其他MVC框架一样, 以请求为驱动 , 围绕一个中心Servlet分派请求及提供其他功能，DispatcherServlet是一个实际的Servlet (它继承自HttpServlet 基类)。</p>
+<p>5、Springmvc的原理图</p>
+<p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpscG6J6D.jpg" alt="img"> </p>
+<p>6、可能遇到的问题：访问出现404，排查步骤：</p>
+<p>（1）查看控制台输出，看一下是不是缺少了什么jar包。</p>
+<p>（2）如果jar包存在，显示无法输出，就在IDEA的项目发布中，添加lib依赖！</p>
+<p>（3）重启Tomcat 即可解决！</p>
+<h1 id="P5-springmvc执行原理"><a href="#P5-springmvc执行原理" class="headerlink" title="P5 springmvc执行原理"></a>P5 springmvc执行原理</h1><p><img src= "/img/loading.gif" data-src="file:////tmp/wps-lyh/ksohtml/wpsNCWyMG.jpg" alt="img"> </p>
+<p>1、图为SpringMVC的一个较完整的流程图，实线表示SpringMVC框架提供的技术，不需要开发者实现，虚线表示需要开发者实现。</p>
+<h1 id="P7-使用注解方法开发springmvc"><a href="#P7-使用注解方法开发springmvc" class="headerlink" title="P7 使用注解方法开发springmvc"></a>P7 使用注解方法开发springmvc</h1><p>1、由于Maven可能存在资源过滤的问题，我们将配置完善</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">  &lt;resources&gt;</span><br><span class="line">​    &lt;resource&gt;</span><br><span class="line">​      &lt;directory&gt;src&#x2F;main&#x2F;java&lt;&#x2F;directory&gt;</span><br><span class="line">​      &lt;includes&gt;</span><br><span class="line">​        &lt;include&gt;**&#x2F;*.properties&lt;&#x2F;include&gt;</span><br><span class="line">​        &lt;include&gt;**&#x2F;*.xml&lt;&#x2F;include&gt;</span><br><span class="line">​      &lt;&#x2F;includes&gt;</span><br><span class="line">​      &lt;filtering&gt;false&lt;&#x2F;filtering&gt;</span><br><span class="line">​    &lt;&#x2F;resource&gt;</span><br><span class="line">​    &lt;resource&gt;</span><br><span class="line">​      &lt;directory&gt;src&#x2F;main&#x2F;resources&lt;&#x2F;directory&gt;</span><br><span class="line">​      &lt;includes&gt;</span><br><span class="line">​        &lt;include&gt;**&#x2F;*.properties&lt;&#x2F;include&gt;</span><br><span class="line">​        &lt;include&gt;**&#x2F;*.xml&lt;&#x2F;include&gt;</span><br><span class="line">​      &lt;&#x2F;includes&gt;</span><br><span class="line">​      &lt;filtering&gt;false&lt;&#x2F;filtering&gt;</span><br><span class="line">​    &lt;&#x2F;resource&gt;</span><br><span class="line">  &lt;&#x2F;resources&gt;</span><br><span class="line">&lt;&#x2F;build&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、添加Spring MVC配置文件</p>
+<p>在resource目录下添加springmvc-servlet.xml配置文件，配置的形式与Spring容器配置基本类似，为了支持基于注解的IOC，设置了自动扫描包的功能，具体配置信息如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns&#x3D;&quot;http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;beans&quot;</span><br><span class="line">   xmlns:xsi&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema-instance&quot;</span><br><span class="line">   xmlns:context&#x3D;&quot;http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;context&quot;</span><br><span class="line">   xmlns:mvc&#x3D;&quot;http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;mvc&quot;</span><br><span class="line">   xsi:schemaLocation&#x3D;&quot;http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;beans</span><br><span class="line">​    http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;beans&#x2F;spring-beans.xsd</span><br><span class="line">​    http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;context</span><br><span class="line">​    https:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;context&#x2F;spring-context.xsd</span><br><span class="line">​    http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;mvc</span><br><span class="line">​    https:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;mvc&#x2F;spring-mvc.xsd&quot;&gt;</span><br><span class="line">  &lt;!-- 自动扫描包，让指定包下的注解生效,由IOC容器统一管理 --&gt;</span><br><span class="line">  &lt;context:component-scan base-package&#x3D;&quot;com.kuang.controller&quot;&#x2F;&gt;</span><br><span class="line">  &lt;!-- 让Spring MVC不处理静态资源 --&gt;</span><br><span class="line">  &lt;mvc:default-servlet-handler &#x2F;&gt;</span><br><span class="line">  &lt;!--</span><br><span class="line">  支持mvc注解驱动</span><br><span class="line">​    在spring中一般采用@RequestMapping注解来完成映射关系</span><br><span class="line">​    要想使@RequestMapping注解生效</span><br><span class="line">​    必须向上下文中注册DefaultAnnotationHandlerMapping</span><br><span class="line">​    和一个AnnotationMethodHandlerAdapter实例</span><br><span class="line">​    这两个实例分别在类级别和方法级别处理。</span><br><span class="line">​    而annotation-driven配置帮助我们自动完成上述两个实例的注入。</span><br><span class="line">  --&gt;</span><br><span class="line">  &lt;mvc:annotation-driven &#x2F;&gt;</span><br><span class="line">  &lt;!-- 视图解析器 --&gt;</span><br><span class="line">  &lt;bean class&#x3D;&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;</span><br><span class="line">​     id&#x3D;&quot;internalResourceViewResolver&quot;&gt;</span><br><span class="line">​    &lt;!-- 前缀 --&gt;</span><br><span class="line">​    &lt;property name&#x3D;&quot;prefix&quot; value&#x3D;&quot;&#x2F;WEB-INF&#x2F;jsp&#x2F;&quot; &#x2F;&gt;</span><br><span class="line">​    &lt;!-- 后缀 --&gt;</span><br><span class="line">​    &lt;property name&#x3D;&quot;suffix&quot; value&#x3D;&quot;.jsp&quot; &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;bean&gt;</span><br><span class="line">&lt;&#x2F;beans&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、小结</p>
+<p>实现步骤其实非常的简单：</p>
+<p>新建一个web项目</p>
+<p>导入相关jar包</p>
+<p>编写web.xml , 注册DispatcherServlet</p>
+<p>编写springmvc配置文件</p>
+<p>接下来就是去创建对应的控制类 , controller</p>
+<p>最后完善前端视图和controller之间的对应</p>
+<p>测试运行调试</p>
+<p>使用springMVC必须配置的三大件：处理器映射器、处理器适配器、视图解析器。通常，我们只需要手动配置视图解析器，而处理器映射器和处理器适配器只需要开启注解驱动即可，而省去了大段的xml配置。</p>
+<h1 id="P8-Controller控制器配置总结"><a href="#P8-Controller控制器配置总结" class="headerlink" title="P8 Controller控制器配置总结"></a>P8 Controller控制器配置总结</h1><p>视图解析器是必需的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 视图解析器 --&gt;</span><br><span class="line">&lt;bean class&#x3D;&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;</span><br><span class="line">      id&#x3D;&quot;internalResourceViewResolver&quot;&gt;</span><br><span class="line">    &lt;!-- 前缀 --&gt;</span><br><span class="line">    &lt;property name&#x3D;&quot;prefix&quot; value&#x3D;&quot;&#x2F;WEB-INF&#x2F;jsp&#x2F;&quot; &#x2F;&gt;</span><br><span class="line">    &lt;!-- 后缀 --&gt;</span><br><span class="line">    &lt;property name&#x3D;&quot;suffix&quot; value&#x3D;&quot;.jsp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1、实现Controller方式"><a href="#1、实现Controller方式" class="headerlink" title="1、实现Controller方式"></a>1、实现Controller方式</h2><p>把类注入bean</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;bean name&#x3D;&quot;&#x2F;t1&quot; class&#x3D;&quot;com.kuang.controller.ControllerDemo1&quot;&gt;&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
+
+<p>实现controller接口</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class ControllerDemo1 implements Controller &#123;</span><br><span class="line">    public ModelAndView handleRequest(HttpServletRequest httpServletRequest,</span><br><span class="line">                                      HttpServletResponse httpServletResponse)</span><br><span class="line">            throws Exception &#123;</span><br><span class="line">        ModelAndView mv&#x3D;new ModelAndView();</span><br><span class="line">        mv.addObject(&quot;msg&quot;,&quot;Controller test1!&quot;);</span><br><span class="line">        mv.setViewName(&quot;test1&quot;); &#x2F;&#x2F;拼接到前后缀</span><br><span class="line">        return mv;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、使用注解方式"><a href="#2、使用注解方式" class="headerlink" title="2、使用注解方式"></a>2、使用注解方式</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Component	组件</span><br><span class="line">@Controller	controller</span><br><span class="line">@Service	service</span><br><span class="line">@Repository	dao层</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Controller</span><br><span class="line">@RequestMapping(&quot;&#x2F;hello&quot;)</span><br><span class="line">public class HelloController &#123;</span><br><span class="line">    @RequestMapping(&quot;&#x2F;h1&quot;)</span><br><span class="line">    public String hello(Model model)&#123;</span><br><span class="line">        &#x2F;&#x2F;封装数据</span><br><span class="line">        model.addAttribute(&quot;msg&quot;,&quot;Hello,SpringMVCAnnotation!&quot;);</span><br><span class="line"></span><br><span class="line">        return &quot;hello&quot;;   &#x2F;&#x2F;会被视图解析器处理</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 自动扫描包，让指定包下的注解生效,由IOC容器统一管理 --&gt;</span><br><span class="line">&lt;context:component-scan base-package&#x3D;&quot;com.kuang.controller&quot;&#x2F;&gt;</span><br><span class="line">&lt;!-- 让Spring MVC不处理静态资源 --&gt;</span><br><span class="line">&lt;mvc:default-servlet-handler &#x2F;&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">支持mvc注解驱动</span><br><span class="line">    在spring中一般采用@RequestMapping注解来完成映射关系</span><br><span class="line">    要想使@RequestMapping注解生效</span><br><span class="line">    必须向上下文中注册DefaultAnnotationHandlerMapping</span><br><span class="line">    和一个AnnotationMethodHandlerAdapter实例</span><br><span class="line">    这两个实例分别在类级别和方法级别处理。</span><br><span class="line">    而annotation-driven配置帮助我们自动完成上述两个实例的注入。</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;mvc:annotation-driven &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="P9-RequestMapping说明"><a href="#P9-RequestMapping说明" class="headerlink" title="P9 RequestMapping说明"></a>P9 RequestMapping说明</h1><h1 id="P10-RestFul风格讲解"><a href="#P10-RestFul风格讲解" class="headerlink" title="P10 RestFul风格讲解"></a>P10 RestFul风格讲解</h1><p>RestFul就是一个资源定位及资源操作的风格。</p>
+<p>资源：互联网所有的事物都可以被抽象为资源</p>
+<p>资源操作：使用POST、DELETE、PUT、GET，使用不同方法对资源进行操作。</p>
+<p>分别对应 添加、 删除、修改、查询。</p>
+<p>1、在新建一个类 RestFulController</p>
+<p>2、在Spring MVC中可以使用  @PathVariable 注解，让方法参数的值对应绑定到一个URI模板变量上。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class RestFulController &#123;</span><br><span class="line">    &#x2F;&#x2F;http:&#x2F;&#x2F;localhost:8080&#x2F;springmvc_04&#x2F;add?a&#x3D;1&amp;b&#x3D;2</span><br><span class="line">    @RequestMapping(&quot;&#x2F;test1&quot;)</span><br><span class="line">    public String test1(int a, int b, Model model)&#123;</span><br><span class="line">        int res&#x3D;a+b;</span><br><span class="line">        model.addAttribute(&quot;msg&quot;,&quot;结果为&quot;+res);</span><br><span class="line">        return &quot;test1&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;http:&#x2F;&#x2F;localhost:8080&#x2F;springmvc_04&#x2F;1&#x2F;2</span><br><span class="line">    @RequestMapping(&quot;&#x2F;test2&#x2F;&#123;a&#125;&#x2F;&#123;b&#125;&quot;)</span><br><span class="line">    public String test2(@PathVariable int a,@PathVariable int b, Model model)&#123;</span><br><span class="line">        int res&#x3D;a+b;</span><br><span class="line">        model.addAttribute(&quot;msg&quot;,&quot;结果为&quot;+res);</span><br><span class="line">        return &quot;test1&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用于约束请求的类型，可以收窄请求范围。指定请求谓词的类型如GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE, TRACE等</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(value &#x3D; &quot;&#x2F;test2&#x2F;&#123;a&#125;&#x2F;&#123;b&#125;&quot;,method &#x3D; RequestMethod.GET)</span><br><span class="line">&#x2F;&#x2F;@GetMapping(&quot;&#x2F;test2&#x2F;&#123;a&#125;&#x2F;&#123;b&#125;&quot;)</span><br><span class="line">public String test2(@PathVariable String a,@PathVariable String b, Model model)&#123;</span><br><span class="line">    System.out.println(a+b);</span><br><span class="line">    model.addAttribute(&quot;msg&quot;,&quot;用户名：&quot;+a+&quot;\n密码：&quot;+b);</span><br><span class="line">    return &quot;test1&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;login&quot;)</span><br><span class="line">public String login(Model model)&#123;</span><br><span class="line">    return &quot;login&quot;;</span><br><span class="line">&#125;</span><br><span class="line">@RequestMapping(value &#x3D; &quot;&#x2F;test3&quot;,method &#x3D; RequestMethod.POST)</span><br><span class="line">public String test3(String a,String b,Model model)&#123;</span><br><span class="line">    model.addAttribute(&quot;msg&quot;,&quot;用户名：&quot;+a+&quot;\n密码：&quot;+b);</span><br><span class="line">    return &quot;test1&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Spring MVC 的 @RequestMapping 注解能够处理 HTTP 请求的方法, 比如 GET, PUT, POST, DELETE 以及 PATCH。所有的地址栏请求默认都会是 HTTP GET 类型的。方法级别的注解变体有如下几个：组合注解</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@GetMapping</span><br><span class="line">@PostMapping</span><br><span class="line">@PutMapping</span><br><span class="line">@DeleteMapping</span><br><span class="line">@PatchMapping</span><br></pre></td></tr></table></figure>
+
+<p>@GetMapping 是一个组合注解，平时使用的会比较多！</p>
+<h1 id="P11-重定向和转发"><a href="#P11-重定向和转发" class="headerlink" title="P11 重定向和转发"></a>P11 重定向和转发</h1><p>通过SpringMVC来实现转发和重定向 - 有视图解析器；重定向 , 不需要视图解析器 , 本质就是重新请求一个新地方嘛 , 所以注意路径问题。可以重定向到另外一个请求实现 。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(value &#x3D; &quot;&#x2F;m1&#x2F;t2&quot;)</span><br><span class="line">public String test2(String a,String b,HttpServletRequest request, HttpServletResponse response) throws IOException&#123;</span><br><span class="line">    System.out.println(request.getSession().getId());</span><br><span class="line">    request.setAttribute(&quot;msg&quot;,&quot;用户名：&quot;+a+&quot;密码：&quot;+b);</span><br><span class="line">    &#x2F;&#x2F;return &quot;redirect:&#x2F;index.jsp&quot;;</span><br><span class="line">    return &quot;redirect:&#x2F;login&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="P12-接受请求参数及数据回显"><a href="#P12-接受请求参数及数据回显" class="headerlink" title="P12 接受请求参数及数据回显"></a>P12 接受请求参数及数据回显</h1><h2 id="1-提交的域名称和处理方法的参数名不一致"><a href="#1-提交的域名称和处理方法的参数名不一致" class="headerlink" title="1 提交的域名称和处理方法的参数名不一致"></a>1 提交的域名称和处理方法的参数名不一致</h2><p>提交数据 : <a href="http://localhost:8080/hello?username=kuangshen。处理方法" target="_blank" rel="noopener">http://localhost:8080/hello?username=kuangshen。处理方法</a> :</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;@RequestParam(&quot;username&quot;) : username提交的域的名称 .</span><br><span class="line">@RequestMapping(&quot;&#x2F;hello&quot;)</span><br><span class="line">public String hello(@RequestParam(&quot;username&quot;) String name)&#123;</span><br><span class="line">   System.out.println(name);</span><br><span class="line">   return &quot;hello&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-提交的是一个对象"><a href="#2-提交的是一个对象" class="headerlink" title="2 提交的是一个对象"></a>2 提交的是一个对象</h2><p>要求提交的表单域和对象的属性名一致  , 参数使用对象即可</p>
+<p>2.1 实体类</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line">   private int id;</span><br><span class="line">   private String name;</span><br><span class="line">   private int age;</span><br><span class="line">   &#x2F;&#x2F;构造</span><br><span class="line">   &#x2F;&#x2F;get&#x2F;set</span><br><span class="line">   &#x2F;&#x2F;tostring()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.2 提交数据 : <a href="http://localhost:8080/mvc04/user?name=kuangshen&amp;id=1&amp;age=15" target="_blank" rel="noopener">http://localhost:8080/mvc04/user?name=kuangshen&amp;id=1&amp;age=15</a></p>
+<p>2.3 处理方法 :</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;user&quot;)</span><br><span class="line">public String user(User user)&#123;</span><br><span class="line">   System.out.println(user);</span><br><span class="line">   return &quot;hello&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>后台输出 : User { id=1, name=’kuangshen’, age=15 }</p>
+<p>说明：如果使用对象的话，前端传递的参数名和对象名必须一致，否则就是null。</p>
+<h2 id="3-数据显示到前端"><a href="#3-数据显示到前端" class="headerlink" title="3 数据显示到前端"></a>3 数据显示到前端</h2><h3 id="3-1-第一种-通过ModelAndView"><a href="#3-1-第一种-通过ModelAndView" class="headerlink" title="3.1 第一种 : 通过ModelAndView"></a>3.1 第一种 : 通过ModelAndView</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class ControllerTest1 implements Controller &#123;</span><br><span class="line">   public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception &#123;</span><br><span class="line">       &#x2F;&#x2F;返回一个模型视图对象</span><br><span class="line">       ModelAndView mv &#x3D; new ModelAndView();</span><br><span class="line">       mv.addObject(&quot;msg&quot;,&quot;ControllerTest1&quot;);</span><br><span class="line">       mv.setViewName(&quot;test&quot;);</span><br><span class="line">       return mv;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-第二种-通过ModelMap"><a href="#3-2-第二种-通过ModelMap" class="headerlink" title="3.2 第二种 : 通过ModelMap"></a>3.2 第二种 : 通过ModelMap</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;hello&quot;)</span><br><span class="line">public String hello(@RequestParam(&quot;username&quot;) String name, ModelMap model)&#123;</span><br><span class="line">   &#x2F;&#x2F;封装要显示到视图中的数据</span><br><span class="line">   &#x2F;&#x2F;相当于req.setAttribute(&quot;name&quot;,name);</span><br><span class="line">   model.addAttribute(&quot;name&quot;,name);</span><br><span class="line">   System.out.println(name);</span><br><span class="line">   return &quot;hello&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-第三种-通过Model"><a href="#3-3-第三种-通过Model" class="headerlink" title="3.3 第三种 : 通过Model"></a>3.3 第三种 : 通过Model</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;ct2&#x2F;hello&quot;)</span><br><span class="line">public String hello(@RequestParam(&quot;username&quot;) String name, Model model)&#123;</span><br><span class="line">   &#x2F;&#x2F;封装要显示到视图中的数据</span><br><span class="line">   &#x2F;&#x2F;相当于req.setAttribute(&quot;name&quot;,name);</span><br><span class="line">   model.addAttribute(&quot;msg&quot;,name);</span><br><span class="line">   System.out.println(name);</span><br><span class="line">   return &quot;test&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="P13-乱码问题解决"><a href="#P13-乱码问题解决" class="headerlink" title="P13 乱码问题解决"></a>P13 乱码问题解决</h1><p>乱码问题通过过滤器解决 , 而SpringMVC给我们提供了一个过滤器 , 可以在web.xml中配置 。修改了xml文件需要重启服务器！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;filter&gt;</span><br><span class="line">   &lt;filter-name&gt;encoding&lt;&#x2F;filter-name&gt;</span><br><span class="line">   &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;&#x2F;filter-class&gt;</span><br><span class="line">   &lt;init-param&gt;</span><br><span class="line">       &lt;param-name&gt;encoding&lt;&#x2F;param-name&gt;</span><br><span class="line">       &lt;param-value&gt;utf-8&lt;&#x2F;param-value&gt;</span><br><span class="line">   &lt;&#x2F;init-param&gt;</span><br><span class="line">&lt;&#x2F;filter&gt;</span><br><span class="line">&lt;!--&#x2F;*才行，&#x2F;不太行--&gt;</span><br><span class="line">&lt;filter-mapping&gt;</span><br><span class="line">   &lt;filter-name&gt;encoding&lt;&#x2F;filter-name&gt;</span><br><span class="line">   &lt;url-pattern&gt;&#x2F;*&lt;&#x2F;url-pattern&gt;</span><br><span class="line">&lt;&#x2F;filter-mapping&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="P14-什么是json"><a href="#P14-什么是json" class="headerlink" title="P14 什么是json"></a>P14 什么是json</h1><h2 id="1-什么是json"><a href="#1-什么是json" class="headerlink" title="1 什么是json"></a>1 什么是json</h2><ul>
+<li>JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式，目前使用特别广泛。</li>
+<li>采用完全独立于编程语言的<strong>文本格式</strong>来存储和表示数据。</li>
+<li>简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。</li>
+<li>易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。</li>
+</ul>
+<p>在 JavaScript 语言中，一切都是对象。因此，任何JavaScript 支持的类型都可以通过 JSON 来表示，例如字符串、数字、对象、数组等。看看他的要求和语法格式：</p>
+<ul>
+<li>对象表示为键值对，数据由逗号分隔</li>
+<li>花括号保存对象</li>
+<li>方括号保存数组</li>
+</ul>
+<p><strong>JSON 键值对</strong>是用来保存 JavaScript 对象的一种方式，和 JavaScript 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;&quot;name&quot;: &quot;QinJiang&quot;&#125;</span><br><span class="line">&#123;&quot;age&quot;: &quot;3&quot;&#125;</span><br><span class="line">&#123;&quot;sex&quot;: &quot;男&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>很多人搞不清楚 JSON 和 JavaScript 对象的关系，甚至连谁是谁都不清楚。其实，可以这么理解：</p>
+<p>JSON 是 JavaScript 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var obj &#x3D; &#123;a: &#39;Hello&#39;, b: &#39;World&#39;&#125;; &#x2F;&#x2F;这是一个对象，注意键名也是可以使用引号包裹的</span><br><span class="line">var json &#x3D; &#39;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#39;; &#x2F;&#x2F;这是一个 JSON 字符串，本质是一个字符串</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-JSON-和-JavaScript-对象互转"><a href="#2-JSON-和-JavaScript-对象互转" class="headerlink" title="2 JSON 和 JavaScript 对象互转"></a>2 JSON 和 JavaScript 对象互转</h2><p>要实现从JSON字符串转换为JavaScript 对象，使用 JSON.parse() 方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var obj &#x3D; JSON.parse(&#39;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#39;);</span><br><span class="line">&#x2F;&#x2F;结果是 &#123;a: &#39;Hello&#39;, b: &#39;World&#39;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>要实现从JavaScript 对象转换为JSON字符串，使用 JSON.stringify() 方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var json &#x3D; JSON.stringify(&#123;a: &#39;Hello&#39;, b: &#39;World&#39;&#125;);</span><br><span class="line">&#x2F;&#x2F;结果是 &#39;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#39;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-代码测试"><a href="#3-代码测试" class="headerlink" title="3 代码测试"></a>3 代码测试</h2><p>1、新建一个module ，springmvc-05-json ， 添加web的支持</p>
+<p>2、在web目录下新建一个 json-1.html ， 编写测试内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">   &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">   &lt;title&gt;JSON_秦疆&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">   &#x2F;&#x2F;编写一个js的对象</span><br><span class="line">   var user &#x3D; &#123;</span><br><span class="line">       name:&quot;秦疆&quot;,</span><br><span class="line">       age:3,</span><br><span class="line">       sex:&quot;男&quot;</span><br><span class="line">  &#125;;</span><br><span class="line">   &#x2F;&#x2F;将js对象转换成json字符串</span><br><span class="line">   var str &#x3D; JSON.stringify(user);</span><br><span class="line">   console.log(str);</span><br><span class="line">   &#x2F;&#x2F;将json字符串转换为js对象</span><br><span class="line">   var user2 &#x3D; JSON.parse(str);</span><br><span class="line">   console.log(user2.age,user2.name,user2.sex);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在IDEA中使用浏览器打开，查看控制台输出！</p>
+<p>P15 Jackjson的使用</p>
+<h3 id="1-乱码统一解决-springmvc-servlet-xml"><a href="#1-乱码统一解决-springmvc-servlet-xml" class="headerlink" title="1 乱码统一解决 springmvc-servlet.xml"></a>1 乱码统一解决 springmvc-servlet.xml</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mvc:annotation-driven&gt;</span><br><span class="line">   &lt;mvc:message-converters register-defaults&#x3D;&quot;true&quot;&gt;</span><br><span class="line">       &lt;bean class&#x3D;&quot;org.springframework.http.converter.StringHttpMessageConverter&quot;&gt;</span><br><span class="line">           &lt;constructor-arg value&#x3D;&quot;UTF-8&quot;&#x2F;&gt;</span><br><span class="line">       &lt;&#x2F;bean&gt;</span><br><span class="line">       &lt;bean class&#x3D;&quot;org.springframework.http.converter.json.MappingJackson2HttpMessageConverter&quot;&gt;</span><br><span class="line">           &lt;property name&#x3D;&quot;objectMapper&quot;&gt;</span><br><span class="line">               &lt;bean class&#x3D;&quot;org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean&quot;&gt;</span><br><span class="line">                   &lt;property name&#x3D;&quot;failOnEmptyBeans&quot; value&#x3D;&quot;false&quot;&#x2F;&gt;</span><br><span class="line">               &lt;&#x2F;bean&gt;</span><br><span class="line">           &lt;&#x2F;property&gt;</span><br><span class="line">       &lt;&#x2F;bean&gt;</span><br><span class="line">   &lt;&#x2F;mvc:message-converters&gt;</span><br><span class="line">&lt;&#x2F;mvc:annotation-driven&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-返回json字符串统一解决"><a href="#2-返回json字符串统一解决" class="headerlink" title="2 返回json字符串统一解决"></a>2 返回json字符串统一解决</h3><p>在类上直接使用 @RestController，这样子，里面所有的方法都只会返回 json 字符串了，不用再每一个都添加@ResponseBody ！我们在前后端分离开发中，一般都使用 @RestController ，十分便捷！</p>
+<h3 id="3-自定义时间格式"><a href="#3-自定义时间格式" class="headerlink" title="3 自定义时间格式"></a>3 自定义时间格式</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;&#x2F;json4&quot;)</span><br><span class="line">public String json4() throws JsonProcessingException &#123;</span><br><span class="line">   ObjectMapper mapper &#x3D; new ObjectMapper();</span><br><span class="line">   &#x2F;&#x2F;不使用时间戳的方式</span><br><span class="line">   mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);</span><br><span class="line">   &#x2F;&#x2F;自定义日期格式对象</span><br><span class="line">   SimpleDateFormat sdf &#x3D; new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line">   &#x2F;&#x2F;指定日期格式</span><br><span class="line">   mapper.setDateFormat(sdf);</span><br><span class="line">   Date date &#x3D; new Date();</span><br><span class="line">   String str &#x3D; mapper.writeValueAsString(date);</span><br><span class="line">   return str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-自定义工具类"><a href="#4-自定义工具类" class="headerlink" title="4 自定义工具类"></a>4 自定义工具类</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class JsonUtil &#123;</span><br><span class="line">    public static String getJson(Object object)&#123;</span><br><span class="line">        return getJson(object,&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @SneakyThrows</span><br><span class="line">    public static String getJson(Object object, String dataFormat)&#123;</span><br><span class="line">        ObjectMapper mapper&#x3D;new ObjectMapper();</span><br><span class="line">        mapper.configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS,false);</span><br><span class="line">        SimpleDateFormat sdf&#x3D;new SimpleDateFormat(dataFormat);</span><br><span class="line">        mapper.setDateFormat(sdf);</span><br><span class="line">        try&#123;</span><br><span class="line">            return mapper.writeValueAsString(object);</span><br><span class="line">        &#125; catch (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="P15-FastJson使用"><a href="#P15-FastJson使用" class="headerlink" title="P15 FastJson使用"></a>P15 FastJson使用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println(&quot;*******Java对象 转 JSON字符串*******&quot;);</span><br><span class="line">String str1 &#x3D; JSON.toJSONString(list);</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;\n****** JSON字符串 转 Java对象*******&quot;);</span><br><span class="line">User jp_user1&#x3D;JSON.parseObject(str2,User.class);</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;\n****** Java对象 转 JSON对象 ******&quot;);</span><br><span class="line">JSONObject jsonObject1 &#x3D; (JSONObject) JSON.toJSON(user2);</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;\n****** JSON对象 转 Java对象 ******&quot;);</span><br><span class="line">User to_java_user &#x3D; JSON.toJavaObject(jsonObject1, User.class);</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>ssm框架整合</title>
