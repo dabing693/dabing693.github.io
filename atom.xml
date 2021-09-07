@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-15T05:36:40.804Z</updated>
+  <updated>2020-08-19T08:19:08.900Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python dataframe常用函数</title>
+    <link href="http://yoursite.com/2020/08/19/python_dataframe/"/>
+    <id>http://yoursite.com/2020/08/19/python_dataframe/</id>
+    <published>2020-08-19T07:37:01.000Z</published>
+    <updated>2020-08-19T08:19:08.900Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><p>import pandas as pd<br>import numpy as np</p><h2 id="read-csv"><a href="#read-csv" class="headerlink" title="read_csv"></a>read_csv</h2><p>df = pd.read_csv(r”Dmawsoni_genemodel_v1.gff”, header=None, sep=’\t’)</p><h2 id="sort-index"><a href="#sort-index" class="headerlink" title="sort_index"></a>sort_index</h2><p>df=df.sort_index(axis = 0,ascending = True,by = [0,3])</p><h2 id="reset-index-排序之后重置索引"><a href="#reset-index-排序之后重置索引" class="headerlink" title="reset_index(排序之后重置索引)"></a>reset_index(排序之后重置索引)</h2><p>df=df.reset_index(drop=True)</p><h2 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv"></a>to_csv</h2><p>df.to_csv(“dm_sort.gff”, sep=’\t’,index=False, header=None)</p><h2 id="取i行j列值"><a href="#取i行j列值" class="headerlink" title="取i行j列值"></a>取i行j列值</h2><p>df.loc[i][j]</p><h2 id="i行j列赋值"><a href="#i行j列赋值" class="headerlink" title="i行j列赋值"></a>i行j列赋值</h2><p>df.loc[i,j]=</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;import&quot;&gt;&lt;/a&gt;import&lt;/h2&gt;&lt;p&gt;import pandas as pd&lt;br&gt;import numpy as np&lt;/p&gt;
+&lt;h2 id=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>CDS与ORF的区别</title>

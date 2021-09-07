@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/08/19/python_dataframe/</loc>
+    
+    <lastmod>2020-08-19T08:19:08.900Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/08/15/Bioinformatics001/</loc>
     
     <lastmod>2020-08-15T05:36:40.804Z</lastmod>
